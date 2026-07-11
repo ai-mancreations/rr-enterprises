@@ -327,6 +327,28 @@
     .contact-info, .contact-form{padding:36px 24px;}
     .why-table{display:block; overflow-x:auto; white-space:nowrap;}
   }
+  @media (max-width: 1024px){
+    .hero-grid, .calc-layout, .contact-grid{grid-template-columns:1fr; gap:28px;}
+    .hero{padding:96px 0 72px;}
+  }
+  @media (max-width: 760px){
+    .wrap{padding:0 18px;}
+    .hero{padding:86px 0 60px;}
+    .hero h1{font-size:clamp(32px, 8vw, 46px);}
+    .hero-ctas, .f-row, .field-row, .result-grid{grid-template-columns:1fr;}
+    .hero-ctas{display:grid; gap:12px;}
+    .btn{width:100%; justify-content:center;}
+    .stat-strip{grid-template-columns:repeat(2, 1fr);} 
+    section{padding:72px 0;}
+    .section-head{margin-bottom:36px;}
+    .contact-info, .contact-form{padding:28px;}
+  }
+  @media (max-width: 480px){
+    .hero{padding:78px 0 52px;}
+    .hero p.lede{font-size:16px;}
+    .stat-strip{grid-template-columns:1fr;}
+    .dash-card, .calc-card, .contact-form, .contact-info{padding:22px;}
+  }
 </style>
 </head>
 <body>
