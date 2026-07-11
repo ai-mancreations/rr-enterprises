@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RR Interiors & Home Decors | Premium Interior Design in Andhra Pradesh | Raghavaraju Enterprises</title>
+<meta name="description" content="Transform your spaces with RR Interiors & Home Decors. Premium interior design for living rooms, kitchens, bedrooms & commercial spaces across Andhra Pradesh.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-void:#FAF6EE;
+    --bg-surface:#FFFFFF;
+    --bg-surface-2:#F2E9D8;
+    --border:#E6D9C0;
+    --text-primary:#2B2420;
+    --text-secondary:#7C6F5D;
+    --accent-1:#C9A227;
+    --accent-2:#8B5E34;
+    --accent-grad: linear-gradient(120deg, var(--accent-1), var(--accent-2));
+    --green:#4B7B5B;
+    --font-display:'Playfair Display', serif;
+    --font-body:'Inter', sans-serif;
+    --font-mono:'JetBrains Mono', monospace;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg-void); color:var(--text-primary); font-family:var(--font-body); line-height:1.6; overflow-x:hidden;}
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 24px;}
+  h1,h2,h3,h4{font-family:var(--font-display); font-weight:700; letter-spacing:-0.01em; line-height:1.15;}
+  .mono{font-family:var(--font-mono);}
+  .eyebrow{font-family:var(--font-mono); font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent-2); display:flex; align-items:center; gap:8px; margin-bottom:16px;}
+  .eyebrow::before{content:''; width:18px; height:1px; background:var(--accent-2);}
+  .btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:14px 26px; border-radius:8px; font-family:var(--font-body); font-weight:600; font-size:15px; cursor:pointer; border:1px solid transparent; transition:transform .15s ease, box-shadow .15s ease;}
+  .btn-primary{background:var(--accent-grad); color:#FFFBF2; box-shadow:0 10px 24px -10px rgba(139,94,52,.45);}
+  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 14px 30px -10px rgba(139,94,52,.55);}
+  .btn-ghost{border-color:var(--border); color:var(--text-primary); background:#fff;}
+  .btn-ghost:hover{border-color:var(--accent-1); color:var(--accent-2);}
+
+  /* ---------- NAV ---------- */
+  header{position:sticky; top:0; z-index:50; background:rgba(250,246,238,.85); backdrop-filter:blur(14px); border-bottom:1px solid var(--border);}
+  nav{display:flex; align-items:center; justify-content:space-between; padding:16px 0;}
+  .brand{display:flex; align-items:center; gap:10px; font-family:var(--font-display); font-weight:700; font-size:18px;}
+  .brand-mark{width:34px; height:34px; border-radius:9px; background:var(--accent-grad); display:flex; align-items:center; justify-content:center; font-size:17px; color:#fff;}
+  .brand small{display:block; font-family:var(--font-body); font-weight:400; font-size:11px; color:var(--text-secondary);}
+  .nav-links{display:flex; gap:30px; font-size:14px; color:var(--text-secondary);}
+  .nav-links a:hover{color:var(--accent-2);}
+  .nav-cta{display:flex; align-items:center; gap:16px;}
+  .nav-phone{font-family:var(--font-mono); font-size:14px; color:var(--text-secondary); display:flex; align-items:center; gap:6px;}
+  .nav-phone:hover{color:var(--accent-2);}
+  .nav-toggle{display:none; width:40px; height:40px; border-radius:8px; border:1px solid var(--border); background:#fff; align-items:center; justify-content:center; cursor:pointer; flex-shrink:0;}
+  .nav-toggle span, .nav-toggle span::before, .nav-toggle span::after{content:''; display:block; width:18px; height:2px; background:var(--text-primary); position:relative; transition:all .2s ease;}
+  .nav-toggle span::before{position:absolute; top:-6px;}
+  .nav-toggle span::after{position:absolute; top:6px;}
+  .nav-toggle.open span{background:transparent;}
+  .nav-toggle.open span::before{top:0; transform:rotate(45deg);}
+  .nav-toggle.open span::after{top:0; transform:rotate(-45deg);}
+  .mobile-menu{display:none; flex-direction:column; gap:4px; max-height:0; overflow:hidden; border-top:1px solid var(--border); transition:max-height .25s ease;}
+  .mobile-menu.open{max-height:460px;}
+  .mobile-menu a{padding:14px 0; font-size:15px; color:var(--text-secondary); border-bottom:1px solid var(--border);}
+  .mobile-menu a:hover{color:var(--accent-2);}
+  .mobile-menu .mm-cta{margin:14px 0 6px;}
+  @media (max-width:900px){ .nav-links, .nav-cta{display:none;} .nav-toggle{display:flex;} .mobile-menu{display:flex;} }
+  @media (max-width:420px){ .brand small{display:none;} }
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative; padding:100px 0 80px; overflow:hidden;}
+  .hero-bg{
+    position:absolute; inset:0; z-index:0;
+    background-image:
+      linear-gradient(180deg, rgba(250,246,238,.90) 0%, rgba(250,246,238,.96) 55%, var(--bg-void) 100%),
+      url('https://images.unsplash.com/photo-1759238136854-a43787126db7?fm=jpg&q=80&w=2000&auto=format&fit=crop');
+    background-size:cover; background-position:center;
+    animation:heroPan 24s ease-in-out infinite alternate;
+  }
+  @keyframes heroPan{ 0%{background-position:center top;} 100%{background-position:center bottom;} }
+  @media (prefers-reduced-motion: reduce){ .hero-bg{animation:none;} }
+  .glow-orb{position:absolute; top:-220px; right:-160px; width:640px; height:640px; border-radius:50%; background:radial-gradient(circle at 40% 40%, rgba(201,162,39,.18), rgba(139,94,52,.07) 45%, transparent 70%); filter:blur(10px); animation:pulse 6s ease-in-out infinite;}
+  @keyframes pulse{ 0%,100%{transform:scale(1); opacity:1;} 50%{transform:scale(1.08); opacity:.85;} }
+  @media (prefers-reduced-motion: reduce){ .glow-orb{animation:none;} }
+  .hero-grid{display:grid; grid-template-columns:1.15fr .85fr; gap:56px; align-items:center; position:relative;}
+  @media (max-width:960px){ .hero-grid{grid-template-columns:1fr;} }
+  .hero h1{font-size:clamp(32px,4.8vw,52px); margin-bottom:20px;}
+  .hero h1 span{background:var(--accent-grad); -webkit-background-clip:text; background-clip:text; color:transparent;}
+  .hero p.lede{color:var(--text-secondary); font-size:17px; max-width:520px; margin-bottom:24px;}
+  .check-row{display:flex; flex-wrap:wrap; gap:10px 18px; margin-bottom:32px;}
+  .check-row span{font-size:13px; color:var(--text-secondary); display:flex; align-items:center; gap:6px;}
+  .check-row span::before{content:'✓'; color:var(--accent-2); font-weight:700;}
+  .hero-ctas{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:40px;}
+
+  .dash-card{background:#fff; border:1px solid var(--border); border-radius:16px; padding:24px; box-shadow:0 25px 50px -30px rgba(43,36,32,.25);}
+  .dash-card .dash-head{display:flex; justify-content:space-between; align-items:center; margin-bottom:18px;}
+  .dash-head .dot{width:8px; height:8px; border-radius:50%; background:var(--green); box-shadow:0 0 0 3px rgba(75,123,91,.18);}
+  .dash-row{display:flex; justify-content:space-between; padding:12px 0; border-top:1px solid var(--border); font-size:14px;}
+  .dash-row:first-of-type{border-top:none;}
+  .dash-row .v{font-family:var(--font-mono); color:var(--accent-2); font-weight:600;}
+
+  /* ---------- SECTION SHELL ---------- */
+  section{padding:88px 0; border-top:1px solid var(--border); scroll-margin-top:80px;}
+  .section-head{max-width:640px; margin-bottom:52px;}
+  .section-head h2{font-size:clamp(26px,3.2vw,36px); margin-bottom:14px;}
+  .section-head p{color:var(--text-secondary); font-size:16px;}
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0; transform:translateY(28px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in-view{opacity:1; transform:translateY(0);}
+  .reveal-1{transition-delay:.05s;} .reveal-2{transition-delay:.15s;} .reveal-3{transition-delay:.25s;} .reveal-4{transition-delay:.35s;}
+  @media (prefers-reduced-motion: reduce){ .reveal{opacity:1; transform:none; transition:none;} }
+
+  /* ---------- GALLERY SLIDESHOW ---------- */
+  .gallery{position:relative; border-radius:18px; overflow:hidden; border:1px solid var(--border); aspect-ratio:16/7; background:var(--bg-surface-2); box-shadow:0 25px 50px -30px rgba(43,36,32,.25);}
+  @media (max-width:700px){ .gallery{aspect-ratio:4/5;} }
+  .gallery-slide{position:absolute; inset:0; opacity:0; transition:opacity 1s ease; background-size:cover; background-position:center;}
+  .gallery-slide.active{opacity:1;}
+  .gallery-slide::after{content:''; position:absolute; inset:0; background:linear-gradient(0deg, rgba(20,15,10,.78) 0%, rgba(20,15,10,.05) 55%, transparent 100%);}
+  .gallery-caption{position:absolute; left:24px; right:24px; bottom:20px; z-index:2;}
+  .gallery-caption .tag{font-family:var(--font-mono); font-size:11px; text-transform:uppercase; letter-spacing:.1em; color:var(--accent-1); display:block; margin-bottom:6px;}
+  .gallery-caption h4{font-size:clamp(18px,2.6vw,24px); color:#fff;}
+  .gallery-dots{position:absolute; right:20px; bottom:20px; z-index:3; display:flex; gap:8px;}
+  .gallery-dot{width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,.4); cursor:pointer; border:none; padding:0; transition:background .2s ease, transform .2s ease;}
+  .gallery-dot.active{background:var(--accent-1); transform:scale(1.2);}
+  .gallery-arrow{position:absolute; top:50%; transform:translateY(-50%); z-index:3; width:38px; height:38px; border-radius:50%; border:1px solid rgba(255,255,255,.3); background:rgba(20,15,10,.35); color:#fff; font-size:16px; cursor:pointer; backdrop-filter:blur(4px); display:flex; align-items:center; justify-content:center;}
+  .gallery-arrow:hover{background:rgba(20,15,10,.6); border-color:var(--accent-1);}
+  .gallery-arrow.prev{left:16px;} .gallery-arrow.next{right:16px;}
+
+  /* ---------- CARDS ---------- */
+  .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  @media (max-width:860px){ .grid-3{grid-template-columns:1fr;} }
+  .grid-4{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+  @media (max-width:860px){ .grid-4{grid-template-columns:1fr 1fr;} }
+  @media (max-width:560px){ .grid-4{grid-template-columns:1fr;} }
+  .card{background:#fff; border:1px solid var(--border); border-radius:14px; padding:28px; transition:border-color .15s ease, transform .15s ease, box-shadow .15s ease; box-shadow:0 2px 10px -6px rgba(43,36,32,.1);}
+  .card:hover{border-color:rgba(201,162,39,.5); transform:translateY(-3px); box-shadow:0 16px 30px -18px rgba(43,36,32,.25);}
+  .card .ic{font-size:28px; margin-bottom:16px;}
+  .card h3{font-size:19px; margin-bottom:10px;}
+  .card p{color:var(--text-secondary); font-size:14px; margin-bottom:14px;}
+  .card-top{display:flex; justify-content:space-between; align-items:flex-start; gap:12px;}
+  .card-chevron{font-family:var(--font-mono); font-size:18px; color:var(--text-secondary); transition:transform .25s ease; flex-shrink:0; margin-top:6px;}
+  .card.expanded .card-chevron{transform:rotate(45deg); color:var(--accent-2);}
+  .card-detail{max-height:0; overflow:hidden; opacity:0; transition:max-height .35s ease, opacity .25s ease, margin-top .3s ease;}
+  .card.expanded .card-detail{max-height:520px; opacity:1; margin-top:18px;}
+  .card-detail-inner{padding-top:18px; border-top:1px solid var(--border);}
+  .card-detail h5{font-family:var(--font-mono); font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--accent-2); margin-bottom:10px;}
+  .card-detail ul{list-style:none; margin-bottom:14px;}
+  .card-detail li{display:flex; gap:8px; padding:6px 0; color:var(--text-secondary); font-size:13px;}
+  .card-detail li::before{content:'◆'; color:var(--accent-1); font-size:8px; margin-top:5px;}
+  .card-detail .meta-line{font-size:13px; color:var(--text-secondary);}
+  .card-detail .meta-line strong{color:var(--accent-2); font-family:var(--font-mono);}
+  .card-photo{width:calc(100% + 56px); max-width:none; margin:-28px -28px 20px; height:170px; object-fit:cover; border-radius:14px 14px 0 0; display:block;}
+  .range-pill{display:inline-block; font-family:var(--font-mono); font-size:12px; color:var(--accent-2); border:1px solid rgba(201,162,39,.4); background:rgba(201,162,39,.08); padding:4px 10px; border-radius:100px;}
+  .mini-slider{position:relative; height:180px; border-radius:10px; overflow:hidden; margin-bottom:16px; background:var(--bg-surface-2);}
+  .mini-slider-track{display:flex; height:100%; transition:transform .4s ease;}
+  .mini-slider-track img{flex:0 0 100%; width:100%; height:100%; object-fit:cover; object-position:center; display:block;}
+  .ms-arrow{position:absolute; top:50%; transform:translateY(-50%); z-index:3; width:30px; height:30px; border-radius:50%; border:1px solid rgba(255,255,255,.35); background:rgba(20,15,10,.4); color:#fff; font-size:15px; cursor:pointer; backdrop-filter:blur(4px); display:flex; align-items:center; justify-content:center; line-height:1;}
+  .ms-arrow:hover{background:rgba(20,15,10,.65); border-color:var(--accent-1);}
+  .ms-arrow.ms-prev{left:10px;} .ms-arrow.ms-next{right:10px;}
+  .ms-dots{position:absolute; left:0; right:0; bottom:10px; z-index:3; display:flex; justify-content:center; gap:6px;}
+  .ms-dot{width:7px; height:7px; border-radius:50%; background:rgba(255,255,255,.5); cursor:pointer; border:none; padding:0; transition:background .2s ease, transform .2s ease;}
+  .ms-dot.active{background:var(--accent-1); transform:scale(1.25);}
+  .ms-count{position:absolute; top:10px; right:10px; z-index:3; background:rgba(20,15,10,.5); color:#fff; font-family:var(--font-mono); font-size:11px; padding:3px 8px; border-radius:100px; backdrop-filter:blur(4px);}
+
+  .review-summary{display:flex; align-items:center; gap:14px; margin-bottom:36px; flex-wrap:wrap;}
+  .review-summary .rs-score{font-family:var(--font-mono); font-size:34px; font-weight:700; color:var(--accent-2);}
+  .review-summary .rs-stars{color:var(--accent-1); font-size:16px; letter-spacing:2px;}
+  .review-summary .rs-sub{color:var(--text-secondary); font-size:13px;}
+  .review-marquee{overflow:hidden; position:relative; padding:4px 0 8px;
+    -webkit-mask-image:linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+    mask-image:linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);}
+  .review-track{display:flex; gap:20px; width:max-content; animation:reviewScroll 38s linear infinite;}
+  .review-marquee:hover .review-track{animation-play-state:paused;}
+  .review-card{background:var(--bg-surface); border:1px solid var(--border); border-radius:14px; padding:24px; box-shadow:0 2px 10px -6px rgba(43,36,32,.08); display:flex; flex-direction:column; gap:12px; width:320px; flex:0 0 320px;}
+  .review-card .rc-stars{color:var(--accent-1); font-size:14px; letter-spacing:2px;}
+  .review-card .rc-quote{font-size:14.5px; line-height:1.6;}
+  .review-card .rc-person{display:flex; align-items:center; gap:12px; margin-top:auto; padding-top:8px; border-top:1px solid var(--border);}
+  .review-card .rc-avatar{width:38px; height:38px; border-radius:50%; background:var(--accent-grad); color:#fff; font-family:var(--font-mono); font-weight:700; font-size:14px; display:flex; align-items:center; justify-content:center; flex-shrink:0;}
+  .review-card .rc-name{font-size:13.5px; font-weight:600;}
+  .review-card .rc-loc{font-size:12px; color:var(--text-secondary);}
+  @keyframes reviewScroll{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
+  @media (max-width:640px){ .review-card{width:270px; flex:0 0 270px;} }
+  .card.expanded .card-detail{max-height:800px;}
+
+  .proj-meta{display:flex; gap:14px; flex-wrap:wrap; font-size:13px; color:var(--text-secondary); margin-bottom:6px;}
+
+  /* ---------- PROCESS ---------- */
+  .process-row{display:grid; grid-template-columns:repeat(5,1fr); gap:44px;}
+  @media (max-width:960px){ .process-row{grid-template-columns:repeat(3,1fr);} }
+  @media (max-width:640px){ .process-row{grid-template-columns:1fr;} }
+  .step{position:relative; padding:26px 18px; background:#fff; border:1px solid var(--border); border-radius:14px; box-shadow:0 2px 10px -6px rgba(43,36,32,.1);}
+  .step .step-num{font-family:var(--font-mono); font-size:32px; font-weight:700; background:var(--accent-grad); -webkit-background-clip:text; background-clip:text; color:transparent; margin-bottom:12px;}
+  .step h4{font-size:15px; margin-bottom:8px;}
+  .step p{color:var(--text-secondary); font-size:13px;}
+  .step:not(:last-child)::after{
+    content:'→'; position:absolute; z-index:2; font-family:var(--font-mono); font-weight:700;
+    color:#fff; font-size:16px; line-height:1; top:32px; right:-34px;
+    background:var(--accent-grad); width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+    box-shadow:0 4px 10px -4px rgba(139,94,52,.5);
+  }
+  @media (max-width:960px){
+    .step:nth-child(3)::after{ content:'↓'; top:auto; right:auto; left:50%; bottom:-34px; transform:translateX(-50%); }
+  }
+  @media (max-width:640px){
+    .step:not(:last-child)::after{ content:'↓'; top:auto; right:auto; left:50%; bottom:-34px; transform:translateX(-50%); }
+  }
+
+  /* ---------- BUDGET CALCULATOR ---------- */
+  .calc-layout{display:grid; grid-template-columns:.85fr 1.15fr; gap:40px;}
+  @media (max-width:960px){ .calc-layout{grid-template-columns:1fr;} }
+  .fact-list{list-style:none;}
+  .fact-list li{display:flex; gap:12px; padding:12px 0; border-top:1px solid var(--border); color:var(--text-secondary); font-size:14px;}
+  .fact-list li:first-child{border-top:none;}
+  .fact-list li::before{content:'◆'; color:var(--accent-1); font-size:10px; margin-top:5px;}
+  .calc-card{background:#fff; border:1px solid var(--border); border-radius:16px; padding:32px; box-shadow:0 25px 50px -30px rgba(43,36,32,.22);}
+  .field{margin-bottom:18px;}
+  .field label{display:block; font-size:13px; color:var(--text-secondary); margin-bottom:8px; font-family:var(--font-mono);}
+  .field input, .field select{width:100%; padding:13px 14px; border-radius:8px; border:1px solid var(--border); background:var(--bg-surface-2); color:var(--text-primary); font-family:var(--font-body); font-size:15px;}
+  .field input:focus, .field select:focus{outline:none; border-color:var(--accent-1);}
+  .field-row{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  @media (max-width:520px){ .field-row{grid-template-columns:1fr;} }
+  .tier-row{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:18px;}
+  .tier-btn{padding:12px 8px; text-align:center; border-radius:8px; border:1px solid var(--border); background:var(--bg-surface-2); cursor:pointer; font-size:13px; font-weight:600; transition:all .15s ease;}
+  .tier-btn .rate{display:block; font-family:var(--font-mono); font-weight:400; font-size:11px; color:var(--text-secondary); margin-top:3px;}
+  .tier-btn.active{background:var(--accent-grad); border-color:transparent; color:#fff;}
+  .tier-btn.active .rate{color:rgba(255,255,255,.85);}
+  .calc-result{margin-top:24px; padding-top:24px; border-top:1px solid var(--border);}
+  .result-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:18px;}
+  .result-item{background:var(--bg-surface-2); border-radius:10px; padding:14px;}
+  .result-item .k{font-size:12px; color:var(--text-secondary); margin-bottom:4px;}
+  .result-item .v{font-family:var(--font-mono); font-size:16px; color:var(--accent-2); font-weight:600;}
+  .cost-hero{background:linear-gradient(135deg, rgba(75,123,91,.1), rgba(75,123,91,.02)); border:1px solid rgba(75,123,91,.3); border-radius:12px; padding:20px; text-align:center;}
+  .cost-hero .amt{font-family:var(--font-mono); font-size:26px; color:var(--green); font-weight:700;}
+  .cost-hero .sub{font-size:13px; color:var(--text-secondary); margin-top:6px;}
+
+  /* ---------- CONTACT ---------- */
+  .contact-layout{display:grid; grid-template-columns:.9fr 1.1fr; gap:48px;}
+  @media (max-width:960px){ .contact-layout{grid-template-columns:1fr;} }
+  .contact-item{display:flex; gap:14px; margin-bottom:22px;}
+  .contact-item .ic{font-size:20px; width:40px; height:40px; border-radius:9px; background:#fff; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; flex-shrink:0;}
+  .contact-item h4{font-size:14px; margin-bottom:4px; font-family:var(--font-body); font-weight:600;}
+  .contact-item p, .contact-item a{color:var(--text-secondary); font-size:14px;}
+  .contact-item a:hover{color:var(--accent-2);}
+  .form-card{background:#fff; border:1px solid var(--border); border-radius:16px; padding:32px; box-shadow:0 25px 50px -30px rgba(43,36,32,.22);}
+  .field-row3{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  @media (max-width:560px){ .field-row3{grid-template-columns:1fr;} }
+  textarea{width:100%; padding:13px 14px; border-radius:8px; border:1px solid var(--border); background:var(--bg-surface-2); color:var(--text-primary); font-family:var(--font-body); font-size:15px; resize:vertical; min-height:90px;}
+  .form-note{font-size:12px; color:var(--text-secondary); margin-top:14px;}
+
+  /* ---------- FOOTER ---------- */
+  footer{padding:64px 0 32px; border-top:1px solid var(--border); background:#fff;}
+  .foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px; margin-bottom:48px;}
+  @media (max-width:860px){ .foot-grid{grid-template-columns:1fr 1fr;} }
+  @media (max-width:560px){ .foot-grid{grid-template-columns:1fr;} }
+  .foot-grid h4{font-family:var(--font-mono); font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--accent-2); margin-bottom:16px;}
+  .foot-grid ul{list-style:none;}
+  .foot-grid li{margin-bottom:10px; font-size:14px; color:var(--text-secondary);}
+  .foot-grid li a:hover{color:var(--accent-2);}
+  .foot-bottom{border-top:1px solid var(--border); padding-top:24px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:13px; color:var(--text-secondary);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="index.html" class="brand">
+        <span class="brand-mark">◆</span>
+        <span>RR Interiors<small>A Unit of Raghavaraju Enterprises</small></span>
+      </a>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#calculator">Budget Calculator</a>
+        <a href="#projects">Projects</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="tel:8367086748" class="nav-phone">📞 8367086748</a>
+        <a href="#contact" class="btn btn-primary" style="padding:10px 20px; font-size:14px;">Get Free Quote</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#services">Services</a>
+      <a href="#calculator">Budget Calculator</a>
+      <a href="#projects">Projects</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:8367086748" class="nav-phone" style="border-bottom:none;">📞 8367086748</a>
+      <a href="#contact" class="btn btn-primary mm-cta" style="width:100%;">Get Free Quote</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero" style="border-top:none; padding-top:64px;">
+  <div class="hero-bg"></div>
+  <div class="glow-orb"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Premium Interior Design · Andhra Pradesh</div>
+      <h1>Transforming spaces, <span>enriching lives.</span></h1>
+      <p class="lede">Expert interior design services that blend aesthetics with functionality — creating spaces that inspire and delight, from single rooms to full commercial fit-outs.</p>
+      <div class="check-row">
+        <span>Custom Designs</span>
+        <span>Premium Materials</span>
+        <span>On-Time Delivery</span>
+        <span>Transparent Pricing</span>
+      </div>
+      <div class="hero-ctas">
+        <a href="#projects" class="btn btn-primary">Explore Our Work</a>
+        <a href="#calculator" class="btn btn-ghost">Estimate My Budget</a>
+      </div>
+    </div>
+    <div class="dash-card">
+      <div class="dash-head">
+        <span class="mono" style="font-size:13px; color:var(--text-secondary);">Sample project · Living Room</span>
+        <span class="dot"></span>
+      </div>
+      <div class="dash-row"><span>Area covered</span><span class="v">~450 sq.ft</span></div>
+      <div class="dash-row"><span>Typical budget</span><span class="v">₹3–5 Lakhs</span></div>
+      <div class="dash-row"><span>Design to handover</span><span class="v">4–6 weeks</span></div>
+      <div class="dash-row"><span>Materials</span><span class="v">Premium / Custom</span></div>
+      <div class="dash-row"><span>Workmanship warranty</span><span class="v">2 Years</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">A glimpse inside</div>
+      <h2>Spaces we've designed.</h2>
+      <p>A look at the range of interiors we create — from cozy living rooms to full commercial fit-outs.</p>
+    </div>
+    <div class="gallery reveal" id="gallery">
+      <div class="gallery-slide active" style="background-image:url('https://images.unsplash.com/photo-1759238136854-a43787126db7?fm=jpg&q=80&w=1600&auto=format&fit=crop')">
+        <div class="gallery-caption"><span class="tag">Living Room</span><h4>Contemporary living spaces</h4></div>
+      </div>
+      <div class="gallery-slide" style="background-image:url('https://images.unsplash.com/photo-1692133186528-c1c42edd5a5c?fm=jpg&q=80&w=1600&auto=format&fit=crop')">
+        <div class="gallery-caption"><span class="tag">Modular Kitchen</span><h4>Smart, modern kitchens</h4></div>
+      </div>
+      <div class="gallery-slide" style="background-image:url('https://images.unsplash.com/photo-1748679979601-dc9ec43d900d?fm=jpg&q=80&w=1600&auto=format&fit=crop')">
+        <div class="gallery-caption"><span class="tag">Bedroom</span><h4>Serene bedroom interiors</h4></div>
+      </div>
+      <div class="gallery-slide" style="background-image:url('https://images.unsplash.com/photo-1753605788101-04d1e653e74a?fm=jpg&q=80&w=1600&auto=format&fit=crop')">
+        <div class="gallery-caption"><span class="tag">Bathroom</span><h4>Spa-inspired washrooms</h4></div>
+      </div>
+      <div class="gallery-slide" style="background-image:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?fm=jpg&q=80&w=1600&auto=format&fit=crop')">
+        <div class="gallery-caption"><span class="tag">Commercial</span><h4>Professional office interiors</h4></div>
+      </div>
+      <button class="gallery-arrow prev" onclick="galleryMove(-1)" aria-label="Previous photo">‹</button>
+      <button class="gallery-arrow next" onclick="galleryMove(1)" aria-label="Next photo">›</button>
+      <div class="gallery-dots" id="galleryDots"></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">What we design</div>
+      <h2>Our Interior Design Services</h2>
+      <p>Comprehensive interior solutions tailored to your style and budget. Click any service to see recent work.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card expandable reveal" onclick="toggleCard(this)">
+        <img class="card-photo" src="https://images.unsplash.com/photo-1759238136854-a43787126db7?fm=jpg&q=75&w=900&auto=format&fit=crop" alt="Modern living room interior design" loading="lazy">
+        <div class="card-top"><div><div class="ic">🛋️</div><h3>Living Room Design</h3></div><span class="card-chevron">+</span></div>
+        <p>Create inviting living spaces with custom furniture, lighting, and decor that reflect your personality and lifestyle.</p>
+        <div class="card-detail"><div class="card-detail-inner">
+          <h5>Recent Work</h5>
+          <div class="mini-slider">
+            <div class="mini-slider-track">
+              <img src="https://images.unsplash.com/photo-1759238136854-a43787126db7?fm=jpg&q=75&w=700&auto=format&fit=crop" alt="Living room project 1" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1763827657709-b1bbc3c4945b?fm=jpg&q=75&w=700&auto=format&fit=crop" alt="Living room project 2" loading="lazy">
+            </div>
+            <button class="ms-arrow ms-prev" onclick="event.stopPropagation(); msMove(this,-1)" aria-label="Previous photo">‹</button>
+            <button class="ms-arrow ms-next" onclick="event.stopPropagation(); msMove(this,1)" aria-label="Next photo">›</button>
+            <div class="ms-dots"></div>
+          </div>
+          <h5>What's included</h5>
+          <ul>
+            <li>Custom furniture layout and seating arrangements</li>
+            <li>False ceiling, accent lighting, and wall treatments</li>
+            <li>TV units, storage units, and decor styling</li>
+          </ul>
+          <p class="meta-line">Typical budget: <strong>₹2 – 6 Lakhs</strong>, depending on area and finish level.</p>
+        </div></div>
+      </div>
+      <div class="card expandable reveal" onclick="toggleCard(this)">
+        <img class="card-photo" src="https://images.unsplash.com/photo-1692133186528-c1c42edd5a5c?fm=jpg&q=75&w=900&auto=format&fit=crop" alt="Modular kitchen interior design" loading="lazy">
+        <div class="card-top"><div><div class="ic">🍳</div><h3>Modular Kitchen</h3></div><span class="card-chevron">+</span></div>
+        <p>Modern modular kitchens with smart storage, premium finishes, and ergonomic designs for efficient cooking.</p>
+        <div class="card-detail"><div class="card-detail-inner">
+          <h5>Recent Work</h5>
+          <div class="mini-slider">
+            <div class="mini-slider-track">
+              <img src="https://images.unsplash.com/photo-1692133186528-c1c42edd5a5c?fm=jpg&q=75&w=700&auto=format&fit=crop" alt="Kitchen project 1" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1682888813913-e13f18692019?fm=jpg&q=75&w=700&auto=format&fit=crop" alt="Kitchen project 2" loading="lazy">
+            </div>
+            <button class="ms-arrow ms-prev" onclick="event.stopPropagation(); msMove(this,-1)" aria-label="Previous photo">‹</button>
+            <button class="ms-arrow ms-next" onclick="event.stopPropagation(); msMove(this,1)" aria-label="Next photo">›</button>
+            <div class="ms-dots"></div>
+          </div>
+          <h5>What's included</h5>
+          <ul>
+            <li>L-shaped, U-shaped, or parallel kitchen layouts</li>
+            <li>Soft-close cabinets, granite/quartz countertops</li>
+            <li>Modular storage — pull-outs, carousels, tall units</li>
+          </ul>
+          <p class="meta-line">Typical budget: <strong>₹2.5 – 6 Lakhs</strong>, based on layout and materials.</p>
+        </div></div>
+      </div>
+      <div class="card expandable reveal" onclick="toggleCard(this)">
+        <img class="card-photo" src="https://images.unsplash.com/photo-1748679979601-dc9ec43d900d?fm=jpg&q=75&w=900&auto=format&fit=crop" alt="Modern bedroom interior design" loading="lazy">
+        <div class="card-top"><div><div class="ic">🛏️</div><h3>Bedroom Interiors</h3></div><span class="card-chevron">+</span></div>
+        <p>Serene bedroom designs with wardrobes, false ceilings, and ambient lighting for perfect relaxation.</p>
+        <div class="card-detail"><div class="card-detail-inner">
+          <h5>Recent Work</h5>
+          <div class="mini-slider">
+            <div class="mini-slider-track">
+              <img src="https://images.unsplash.com/photo-1748679979601-dc9ec43d900d?fm=jpg&q=75&w=700&auto=format&fit=crop" alt="Bedroom project 1" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1668089677938-b52086753f77?fm=jpg&q=75&w=700&auto=format&fit=crop" alt="Bedroom project 2" loading="lazy">
+            </div>
+            <button class="ms-arrow ms-prev" onclick="event.stopPropagation(); msMove(this,-1)" aria-label="Previous photo">‹</button>
+            <button class="ms-arrow ms-next" onclick="event.stopPropagation(); msMove(this,1)" aria-label="Next photo">›</button>
+            <div class="ms-dots"></div>
+          </div>
+          <h5>What's included</h5>
+          <ul>
+            <li>Walk-in or sliding wardrobes with custom interiors</li>
+            <li>Designer false ceiling and mood lighting</li>
+            <li>Study/dressing units where space allows</li>
+          </ul>
+          <p class="meta-line">Typical budget: <strong>₹2 – 5 Lakhs</strong> per bedroom.</p>
+        </div></div>
+      </div>
+      <div class="card expandable reveal" onclick="toggleCard(this)">
+        <img class="card-photo" src="https://images.unsplash.com/photo-1753605788101-04d1e653e74a?fm=jpg&q=75&w=900&auto=format&fit=crop" alt="Luxury bathroom interior design" loading="lazy">
+        <div class="card-top"><div><div class="ic">🚿</div><h3>Bathroom & Washroom</h3></div><span class="card-chevron">+</span></div>
+        <p>Luxury bathroom designs with premium fittings, tiles, and spa-like ambiance for daily rejuvenation.</p>
+        <div class="card-detail"><div class="card-detail-inner">
+          <h5>Recent Work</h5>
+          <div class="mini-slider">
+            <div class="mini-slider-track">
+              <img src="https://images.unsplash.com/photo-1753605788101-04d1e653e74a?fm=jpg&q=75&w=700&auto=format&fit=crop" alt="Bathroom project 1" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1754788358645-d6e6cca12e25?fm=jpg&q=75&w=700&auto=format&fit=crop" alt="Bathroom project 2" loading="lazy">
+            </div>
+            <button class="ms-arrow ms-prev" onclick="event.stopPropagation(); msMove(this,-1)" aria-label="Previous photo">‹</button>
+            <button class="ms-arrow ms-next" onclick="event.stopPropagation(); msMove(this,1)" aria-label="Next photo">›</button>
+            <div class="ms-dots"></div>
+          </div>
+          <h5>What's included</h5>
+          <ul>
+            <li>Premium sanitaryware and branded fittings</li>
+            <li>Italian / imported tile options</li>
+            <li>Waterproofing and ventilation handled end-to-end</li>
+          </ul>
+          <p class="meta-line">Typical budget: <strong>₹1.5 – 3 Lakhs</strong> per washroom.</p>
+        </div></div>
+      </div>
+      <div class="card expandable reveal" onclick="toggleCard(this)">
+        <img class="card-photo" src="https://images.unsplash.com/photo-1757862351841-c6f7ac0b0201?fm=jpg&q=75&w=900&auto=format&fit=crop" alt="Home theater and media room interior" loading="lazy">
+        <div class="card-top"><div><div class="ic">🎬</div><h3>Home Theater</h3></div><span class="card-chevron">+</span></div>
+        <p>Custom home theater setups with acoustic treatment, seating, and immersive audio-visual experience.</p>
+        <div class="card-detail"><div class="card-detail-inner">
+          <h5>Recent Work</h5>
+          <div class="mini-slider">
+            <div class="mini-slider-track">
+              <img src="https://images.unsplash.com/photo-1757862351841-c6f7ac0b0201?fm=jpg&q=75&w=700&auto=format&fit=crop" alt="Home theater project 1" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1524629802380-04f8ec63f471?fm=jpg&q=75&w=700&auto=format&fit=crop" alt="Home theater project 2" loading="lazy">
+            </div>
+            <button class="ms-arrow ms-prev" onclick="event.stopPropagation(); msMove(this,-1)" aria-label="Previous photo">‹</button>
+            <button class="ms-arrow ms-next" onclick="event.stopPropagation(); msMove(this,1)" aria-label="Next photo">›</button>
+            <div class="ms-dots"></div>
+          </div>
+          <h5>What's included</h5>
+          <ul>
+            <li>Acoustic wall/ceiling treatment for sound quality</li>
+            <li>Recliner or tiered theater seating</li>
+            <li>AV setup coordination — screen, speakers, wiring</li>
+          </ul>
+          <p class="meta-line">Typical budget: <strong>₹4 – 8 Lakhs</strong>, depending on room size and AV specs.</p>
+        </div></div>
+      </div>
+      <div class="card expandable reveal" onclick="toggleCard(this)">
+        <img class="card-photo" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?fm=jpg&q=75&w=900&auto=format&fit=crop" alt="Commercial office interior design" loading="lazy">
+        <div class="card-top"><div><div class="ic">🏢</div><h3>Commercial Interiors</h3></div><span class="card-chevron">+</span></div>
+        <p>Professional office and retail space designs that boost productivity and impress clients.</p>
+        <div class="card-detail"><div class="card-detail-inner">
+          <h5>Recent Work</h5>
+          <div class="mini-slider">
+            <div class="mini-slider-track">
+              <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?fm=jpg&q=75&w=700&auto=format&fit=crop" alt="Commercial project 1" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1497366858526-0766cadbe8fa?fm=jpg&q=75&w=700&auto=format&fit=crop" alt="Commercial project 2" loading="lazy">
+            </div>
+            <button class="ms-arrow ms-prev" onclick="event.stopPropagation(); msMove(this,-1)" aria-label="Previous photo">‹</button>
+            <button class="ms-arrow ms-next" onclick="event.stopPropagation(); msMove(this,1)" aria-label="Next photo">›</button>
+            <div class="ms-dots"></div>
+          </div>
+          <h5>What's included</h5>
+          <ul>
+            <li>Workstation layout, cabins, and meeting rooms</li>
+            <li>Branding-aligned reception and common areas</li>
+            <li>Electrical, networking, and HVAC coordination</li>
+          </ul>
+          <p class="meta-line">Typical budget: <strong>₹8 – 20+ Lakhs</strong>, scaled to office size.</p>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="calculator">
+  <div class="wrap calc-layout">
+    <div>
+      <div class="section-head reveal" style="margin-bottom:28px;">
+        <div class="eyebrow">Plan your budget</div>
+        <h2>Estimate Your Interior Budget</h2>
+        <p>Select your home size and finish level to get an instant estimated cost range — the same way leading interior design platforms do it.</p>
+      </div>
+      <ul class="fact-list">
+        <li>Estimate is for full-home interior work, not just one room</li>
+        <li>Essential = functional finishes, laminates, standard hardware</li>
+        <li>Premium = branded hardware, better finishes, false ceilings</li>
+        <li>Luxury = premium materials, custom detailing, imported finishes</li>
+        <li>Final quote depends on site condition and design choices</li>
+      </ul>
+    </div>
+    <div class="calc-card reveal">
+      <h3 style="margin-bottom:20px; font-size:18px;">Budget Calculator</h3>
+      <div class="field">
+        <label>Property Type</label>
+        <select id="bhk" onchange="updateDefaultArea()">
+          <option value="650">1 BHK (~650 sq.ft)</option>
+          <option value="950" selected>2 BHK (~950 sq.ft)</option>
+          <option value="1300">3 BHK (~1,300 sq.ft)</option>
+          <option value="1800">4 BHK (~1,800 sq.ft)</option>
+          <option value="2800">Villa (~2,800 sq.ft)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Approx. Carpet Area (sq.ft)</label>
+        <input type="number" id="calcArea" value="950">
+      </div>
+      <div class="field">
+        <label>Finish Level</label>
+        <div class="tier-row">
+          <div class="tier-btn active" data-rate="950" onclick="selectTier(this)">Essential<span class="rate">₹950/sqft</span></div>
+          <div class="tier-btn" data-rate="1500" onclick="selectTier(this)">Premium<span class="rate">₹1,500/sqft</span></div>
+          <div class="tier-btn" data-rate="2400" onclick="selectTier(this)">Luxury<span class="rate">₹2,400/sqft</span></div>
+        </div>
+      </div>
+      <button class="btn btn-primary" style="width:100%;" onclick="calcBudget()">Calculate Estimate ✨</button>
+      <div class="calc-result">
+        <div class="cost-hero">
+          <div class="amt" id="rCostRange">–</div>
+          <div class="sub">Estimated project cost range</div>
+        </div>
+        <div class="result-grid" style="margin-top:18px;">
+          <div class="result-item"><div class="k">Rate Applied</div><div class="v" id="rRate">–</div></div>
+          <div class="result-item"><div class="k">Estimated Timeline</div><div class="v" id="rTimeline">–</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Our portfolio</div>
+      <h2>Completed Projects</h2>
+      <p>Real projects across Andhra Pradesh — click any project for more detail.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card expandable reveal" onclick="toggleCard(this)">
+        <img class="card-photo" src="https://images.unsplash.com/photo-1759238136854-a43787126db7?fm=jpg&q=75&w=900&auto=format&fit=crop" alt="Modern Living Room project" loading="lazy">
+        <div class="card-top"><div><span class="range-pill">Living Room</span><h3 style="margin-top:10px;">Modern Living Room</h3></div><span class="card-chevron">+</span></div>
+        <p>Contemporary design with premium furniture and elegant lighting.</p>
+        <div class="card-detail"><div class="card-detail-inner">
+          <div class="mini-slider">
+            <div class="mini-slider-track">
+              <img src="https://images.unsplash.com/photo-1759238136854-a43787126db7?fm=jpg&q=75&w=700&auto=format&fit=crop" alt="Modern Living Room photo 1" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1763827657709-b1bbc3c4945b?fm=jpg&q=75&w=700&auto=format&fit=crop" alt="Modern Living Room photo 2" loading="lazy">
+            </div>
+            <button class="ms-arrow ms-prev" onclick="event.stopPropagation(); msMove(this,-1)" aria-label="Previous photo">‹</button>
+            <button class="ms-arrow ms-next" onclick="event.stopPropagation(); msMove(this,1)" aria-label="Next photo">›</button>
+            <div class="ms-dots"></div>
+          </div>
+          <div class="proj-meta"><span>📍 Visakhapatnam</span><span>💰 ₹4.5 Lakhs</span></div>
+          <ul>
+            <li>Custom sectional seating with accent lighting</li>
+            <li>Feature wall panelling and false ceiling</li>
+            <li>Completed in approx. 5 weeks</li>
+          </ul>
+        </div></div>
+      </div>
+      <div class="card expandable reveal" onclick="toggleCard(this)">
+        <img class="card-photo" src="https://images.unsplash.com/photo-1692133186528-c1c42edd5a5c?fm=jpg&q=75&w=900&auto=format&fit=crop" alt="Luxury Modular Kitchen project" loading="lazy">
+        <div class="card-top"><div><span class="range-pill">Kitchen</span><h3 style="margin-top:10px;">Luxury Modular Kitchen</h3></div><span class="card-chevron">+</span></div>
+        <p>Spacious L-shaped kitchen with granite countertops and soft-close cabinets.</p>
+        <div class="card-detail"><div class="card-detail-inner">
+          <div class="mini-slider">
+            <div class="mini-slider-track">
+              <img src="https://images.unsplash.com/photo-1692133186528-c1c42edd5a5c?fm=jpg&q=75&w=700&auto=format&fit=crop" alt="Luxury Modular Kitchen photo 1" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1682888813913-e13f18692019?fm=jpg&q=75&w=700&auto=format&fit=crop" alt="Luxury Modular Kitchen photo 2" loading="lazy">
+            </div>
+            <button class="ms-arrow ms-prev" onclick="event.stopPropagation(); msMove(this,-1)" aria-label="Previous photo">‹</button>
+            <button class="ms-arrow ms-next" onclick="event.stopPropagation(); msMove(this,1)" aria-label="Next photo">›</button>
+            <div class="ms-dots"></div>
+          </div>
+          <div class="proj-meta"><span>📍 Kakinada</span><span>💰 ₹3.2 Lakhs</span></div>
+          <ul>
+            <li>L-shaped layout with tall storage units</li>
+            <li>Granite countertop and soft-close hardware</li>
+            <li>Completed in approx. 4 weeks</li>
+          </ul>
+        </div></div>
+      </div>
+      <div class="card expandable reveal" onclick="toggleCard(this)">
+        <img class="card-photo" src="https://images.unsplash.com/photo-1748679979601-dc9ec43d900d?fm=jpg&q=75&w=900&auto=format&fit=crop" alt="Master Bedroom Suite project" loading="lazy">
+        <div class="card-top"><div><span class="range-pill">Bedroom</span><h3 style="margin-top:10px;">Master Bedroom Suite</h3></div><span class="card-chevron">+</span></div>
+        <p>Elegant bedroom with walk-in wardrobe and designer false ceiling.</p>
+        <div class="card-detail"><div class="card-detail-inner">
+          <div class="mini-slider">
+            <div class="mini-slider-track">
+              <img src="https://images.unsplash.com/photo-1748679979601-dc9ec43d900d?fm=jpg&q=75&w=700&auto=format&fit=crop" alt="Master Bedroom Suite photo 1" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1668089677938-b52086753f77?fm=jpg&q=75&w=700&auto=format&fit=crop" alt="Master Bedroom Suite photo 2" loading="lazy">
+            </div>
+            <button class="ms-arrow ms-prev" onclick="event.stopPropagation(); msMove(this,-1)" aria-label="Previous photo">‹</button>
+            <button class="ms-arrow ms-next" onclick="event.stopPropagation(); msMove(this,1)" aria-label="Next photo">›</button>
+            <div class="ms-dots"></div>
+          </div>
+          <div class="proj-meta"><span>📍 Rajahmundry</span><span>💰 ₹2.8 Lakhs</span></div>
+          <ul>
+            <li>Walk-in wardrobe with internal organizers</li>
+            <li>Layered mood lighting and designer ceiling</li>
+            <li>Completed in approx. 3.5 weeks</li>
+          </ul>
+        </div></div>
+      </div>
+      <div class="card expandable reveal" onclick="toggleCard(this)">
+        <img class="card-photo" src="https://images.unsplash.com/photo-1753605788101-04d1e653e74a?fm=jpg&q=75&w=900&auto=format&fit=crop" alt="Luxury Washroom project" loading="lazy">
+        <div class="card-top"><div><span class="range-pill">Washroom</span><h3 style="margin-top:10px;">Luxury Washroom</h3></div><span class="card-chevron">+</span></div>
+        <p>Spa-inspired bathroom with premium fittings and Italian tiles.</p>
+        <div class="card-detail"><div class="card-detail-inner">
+          <div class="mini-slider">
+            <div class="mini-slider-track">
+              <img src="https://images.unsplash.com/photo-1753605788101-04d1e653e74a?fm=jpg&q=75&w=700&auto=format&fit=crop" alt="Luxury Washroom photo 1" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1754788358645-d6e6cca12e25?fm=jpg&q=75&w=700&auto=format&fit=crop" alt="Luxury Washroom photo 2" loading="lazy">
+            </div>
+            <button class="ms-arrow ms-prev" onclick="event.stopPropagation(); msMove(this,-1)" aria-label="Previous photo">‹</button>
+            <button class="ms-arrow ms-next" onclick="event.stopPropagation(); msMove(this,1)" aria-label="Next photo">›</button>
+            <div class="ms-dots"></div>
+          </div>
+          <div class="proj-meta"><span>📍 Guntur</span><span>💰 ₹1.8 Lakhs</span></div>
+          <ul>
+            <li>Italian tile flooring and wall cladding</li>
+            <li>Rain shower and premium branded fittings</li>
+            <li>Completed in approx. 3 weeks</li>
+          </ul>
+        </div></div>
+      </div>
+      <div class="card expandable reveal" onclick="toggleCard(this)">
+        <img class="card-photo" src="https://images.unsplash.com/photo-1757862351841-c6f7ac0b0201?fm=jpg&q=75&w=900&auto=format&fit=crop" alt="Home Theater Room project" loading="lazy">
+        <div class="card-top"><div><span class="range-pill">Home Theater</span><h3 style="margin-top:10px;">Home Theater Room</h3></div><span class="card-chevron">+</span></div>
+        <p>Immersive cinema experience with acoustic panels and recliner seating.</p>
+        <div class="card-detail"><div class="card-detail-inner">
+          <div class="mini-slider">
+            <div class="mini-slider-track">
+              <img src="https://images.unsplash.com/photo-1757862351841-c6f7ac0b0201?fm=jpg&q=75&w=700&auto=format&fit=crop" alt="Home Theater Room photo 1" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1524629802380-04f8ec63f471?fm=jpg&q=75&w=700&auto=format&fit=crop" alt="Home Theater Room photo 2" loading="lazy">
+            </div>
+            <button class="ms-arrow ms-prev" onclick="event.stopPropagation(); msMove(this,-1)" aria-label="Previous photo">‹</button>
+            <button class="ms-arrow ms-next" onclick="event.stopPropagation(); msMove(this,1)" aria-label="Next photo">›</button>
+            <div class="ms-dots"></div>
+          </div>
+          <div class="proj-meta"><span>📍 Nellore</span><span>💰 ₹5.5 Lakhs</span></div>
+          <ul>
+            <li>Acoustic panelling and blackout treatment</li>
+            <li>Tiered recliner seating for 6</li>
+            <li>Completed in approx. 6 weeks</li>
+          </ul>
+        </div></div>
+      </div>
+      <div class="card expandable reveal" onclick="toggleCard(this)">
+        <img class="card-photo" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?fm=jpg&q=75&w=900&auto=format&fit=crop" alt="Commercial Office project" loading="lazy">
+        <div class="card-top"><div><span class="range-pill">Commercial</span><h3 style="margin-top:10px;">Commercial Office</h3></div><span class="card-chevron">+</span></div>
+        <p>Modern corporate office with collaborative spaces and executive cabins.</p>
+        <div class="card-detail"><div class="card-detail-inner">
+          <div class="mini-slider">
+            <div class="mini-slider-track">
+              <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?fm=jpg&q=75&w=700&auto=format&fit=crop" alt="Commercial Office photo 1" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1497366858526-0766cadbe8fa?fm=jpg&q=75&w=700&auto=format&fit=crop" alt="Commercial Office photo 2" loading="lazy">
+            </div>
+            <button class="ms-arrow ms-prev" onclick="event.stopPropagation(); msMove(this,-1)" aria-label="Previous photo">‹</button>
+            <button class="ms-arrow ms-next" onclick="event.stopPropagation(); msMove(this,1)" aria-label="Next photo">›</button>
+            <div class="ms-dots"></div>
+          </div>
+          <div class="proj-meta"><span>📍 Vijayawada</span><span>💰 ₹12 Lakhs</span></div>
+          <ul>
+            <li>Open workstation zone and 3 executive cabins</li>
+            <li>Meeting room with AV integration</li>
+            <li>Completed in approx. 8 weeks</li>
+          </ul>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">How it works</div>
+      <h2>Our Design Process</h2>
+      <p>A systematic approach to bring your dream interiors to life.</p>
+    </div>
+    <div class="process-row">
+      <div class="step reveal"><div class="step-num">01</div><h4>Consultation</h4><p>Free consultation to understand your vision, requirements, and budget.</p></div>
+      <div class="step reveal reveal-1"><div class="step-num">02</div><h4>Design Concept</h4><p>3D designs and mood boards for your approval with material samples.</p></div>
+      <div class="step reveal reveal-2"><div class="step-num">03</div><h4>Finalization</h4><p>Final design approval, material selection, and detailed quotation.</p></div>
+      <div class="step reveal reveal-3"><div class="step-num">04</div><h4>Execution</h4><p>Professional execution with quality checks and regular updates.</p></div>
+      <div class="step reveal reveal-4"><div class="step-num">05</div><h4>Handover</h4><p>Final walkthrough, styling, and complete project handover.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Why us</div>
+      <h2>Why Choose RR Interiors?</h2>
+      <p>Your trusted interior design partner.</p>
+    </div>
+    <div class="grid-4">
+      <div class="card expandable reveal" onclick="toggleCard(this)">
+        <div class="card-top"><div><div class="ic">🎨</div><h3>Custom Designs</h3></div><span class="card-chevron">+</span></div>
+        <p>Every project is unique. We create personalized designs that reflect your style.</p>
+        <div class="card-detail"><div class="card-detail-inner">
+          <ul>
+            <li>Design concepts built around how you actually live</li>
+            <li>3D visualization before any material is ordered</li>
+            <li>Flexible to your taste — modern, classic, or fusion</li>
+          </ul>
+        </div></div>
+      </div>
+      <div class="card expandable reveal" onclick="toggleCard(this)">
+        <div class="card-top"><div><div class="ic">💎</div><h3>Premium Quality</h3></div><span class="card-chevron">+</span></div>
+        <p>We use only the finest materials and work with skilled craftsmen.</p>
+        <div class="card-detail"><div class="card-detail-inner">
+          <ul>
+            <li>Sourced from trusted material and hardware brands</li>
+            <li>Skilled in-house carpentry and finishing teams</li>
+            <li>Quality checks at every stage of execution</li>
+          </ul>
+        </div></div>
+      </div>
+      <div class="card expandable reveal" onclick="toggleCard(this)">
+        <div class="card-top"><div><div class="ic">⏰</div><h3>On-Time Delivery</h3></div><span class="card-chevron">+</span></div>
+        <p>Committed project timelines with regular progress updates.</p>
+        <div class="card-detail"><div class="card-detail-inner">
+          <ul>
+            <li>Clear timeline shared at project kickoff</li>
+            <li>Regular progress updates through execution</li>
+            <li>Dedicated point of contact for your project</li>
+          </ul>
+        </div></div>
+      </div>
+      <div class="card expandable reveal" onclick="toggleCard(this)">
+        <div class="card-top"><div><div class="ic">💰</div><h3>Transparent Pricing</h3></div><span class="card-chevron">+</span></div>
+        <p>Detailed quotations with no hidden costs. Budget-friendly options available.</p>
+        <div class="card-detail"><div class="card-detail-inner">
+          <ul>
+            <li>Itemized quotation before work begins</li>
+            <li>No surprise costs mid-project</li>
+            <li>Options available across a range of budgets</li>
+          </ul>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Customer reviews</div>
+      <h2>What Our Clients Say</h2>
+      <p>Real feedback from families across Andhra Pradesh who trusted us with their homes.</p>
+    </div>
+    <div class="review-summary reveal">
+      <div class="rs-score">4.8</div>
+      <div>
+        <div class="rs-stars">★★★★★</div>
+        <div class="rs-sub">Based on 130+ Google reviews from completed projects</div>
+      </div>
+    </div>
+  </div>
+  <div class="review-marquee reveal">
+    <div class="review-track" id="reviewTrack">
+      <div class="review-card">
+        <div class="rc-stars">★★★★★</div>
+        <p class="rc-quote">We got our 3BHK done through RR Interiors and honestly the finishing quality exceeded what we expected. The team stuck to the timeline and kept us updated every week.</p>
+        <div class="rc-person">
+          <div class="rc-avatar">SR</div>
+          <div>
+            <div class="rc-name">Sunitha Reddy</div>
+            <div class="rc-loc">Visakhapatnam</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="rc-stars">★★★★★</div>
+        <p class="rc-quote">Very transparent with the quotation — no hidden charges like we faced with other contractors earlier. Our modular kitchen turned out beautiful and practical.</p>
+        <div class="rc-person">
+          <div class="rc-avatar">KR</div>
+          <div>
+            <div class="rc-name">Kiran Rao</div>
+            <div class="rc-loc">Kakinada</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="rc-stars">★★★★★</div>
+        <p class="rc-quote">The 3D design they showed before starting matched almost exactly with the final output. Loved the false ceiling and lighting design for our living room.</p>
+        <div class="rc-person">
+          <div class="rc-avatar">PV</div>
+          <div>
+            <div class="rc-name">Prasanna Venkatesh</div>
+            <div class="rc-loc">Rajahmundry</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="rc-stars">★★★★☆</div>
+        <p class="rc-quote">Good experience overall. There was a small delay in the carpentry stage due to material availability, but the team communicated it in advance and the end result was worth it.</p>
+        <div class="rc-person">
+          <div class="rc-avatar">AN</div>
+          <div>
+            <div class="rc-name">Anitha Nair</div>
+            <div class="rc-loc">Guntur</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="rc-stars">★★★★★</div>
+        <p class="rc-quote">We hired them for our home theater room and it's now our favorite part of the house. Acoustic treatment and seating layout were planned really well within our budget.</p>
+        <div class="rc-person">
+          <div class="rc-avatar">MJ</div>
+          <div>
+            <div class="rc-name">Manoj Joshi</div>
+            <div class="rc-loc">Nellore</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="rc-stars">★★★★★</div>
+        <p class="rc-quote">Got our office interiors done for our new branch office. Professional team, clean execution, and they respected our working hours during the setup.</p>
+        <div class="rc-person">
+          <div class="rc-avatar">DK</div>
+          <div>
+            <div class="rc-name">Deepak Kumar</div>
+            <div class="rc-loc">Vijayawada</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact-layout">
+    <div>
+      <div class="section-head reveal" style="margin-bottom:28px;">
+        <div class="eyebrow">Get in touch</div>
+        <h2>Let's Create Your Dream Space</h2>
+        <p>Ready to transform your home or office? Contact us for a free consultation.</p>
+      </div>
+      <div class="contact-item"><div class="ic">📱</div><div><h4>Phone</h4><a href="tel:8367086748">8367086748</a></div></div>
+      <div class="contact-item"><div class="ic">📧</div><div><h4>Email</h4><a href="mailto:interiors@raghavarajuenterprises.com">interiors@raghavarajuenterprises.com</a></div></div>
+      <div class="contact-item"><div class="ic">📍</div><div><h4>Head Office</h4><p>Kakinada, Andhra Pradesh</p></div></div>
+      <div class="contact-item"><div class="ic">🌍</div><div><h4>Service Area</h4><p>Pan India Services Available</p></div></div>
+    </div>
+    <div class="form-card reveal">
+      <h3 style="margin-bottom:20px; font-size:18px;">Request Free Consultation</h3>
+      <form id="consultForm" onsubmit="return submitConsultForm(event);">
+        <div class="field-row3">
+          <div class="field"><label>Your Name *</label><input type="text" name="name" id="f-name" required></div>
+          <div class="field"><label>Phone Number *</label><input type="tel" name="phone" id="f-phone" required></div>
+        </div>
+        <div class="field-row3">
+          <div class="field"><label>Email Address</label><input type="email" name="email" id="f-email"></div>
+          <div class="field"><label>City/Town *</label><input type="text" name="city" id="f-city" required></div>
+        </div>
+        <div class="field-row3">
+          <div class="field">
+            <label>Project Type</label>
+            <select name="projectType" id="f-project">
+              <option>Select project type</option>
+              <option>Full Home Interior</option>
+              <option>Living Room</option>
+              <option>Modular Kitchen</option>
+              <option>Bedroom</option>
+              <option>Bathroom</option>
+              <option>Commercial/Office</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field"><label>Approx. Area (sq.ft)</label><input type="number" name="area" id="f-area"></div>
+        </div>
+        <div class="field">
+          <label>Budget Range</label>
+          <select name="budget" id="f-budget">
+            <option>Select budget range</option>
+            <option>Under ₹2 Lakhs</option>
+            <option>₹2 - 5 Lakhs</option>
+            <option>₹5 - 10 Lakhs</option>
+            <option>₹10 - 20 Lakhs</option>
+            <option>Above ₹20 Lakhs</option>
+          </select>
+        </div>
+        <div class="field"><label>Project Details</label><textarea name="details" id="f-details"></textarea></div>
+        <button type="submit" class="btn btn-primary" id="f-submit-btn" style="width:100%;">Request Consultation ✨</button>
+        <p class="form-note" id="f-status">We'll contact you within 24 hours to schedule your free consultation.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand" style="margin-bottom:14px;"><span class="brand-mark">◆</span><span>RR Interiors & Home Decors</span></div>
+        <p style="color:var(--text-secondary); font-size:14px;">Premium Interior Design Services · A Unit of Raghavaraju Enterprises. Transforming spaces into stunning masterpieces.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#calculator">Budget Calculator</a></li>
+          <li><a href="#projects">Portfolio</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Other Divisions</h4>
+        <ul>
+          <li><a href="index.html">Raghavaraju Enterprises</a></li>
+          <li><a href="solar.html">RR Solar Energies</a></li>
+          <li><a href="construction.html">RR Homes Construction</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:8367086748">📱 8367086748</a></li>
+          <li><a href="mailto:interiors@raghavarajuenterprises.com">📧 interiors@raghavarajuenterprises.com</a></li>
+          <li>📍 Kakinada, Andhra Pradesh</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>GST: 37MIFPS2466D1ZU</span>
+      <span>© 2026 RR Interiors & Home Decors | A Unit of Raghavaraju Enterprises. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Mobile hamburger menu
+var navToggle = document.getElementById('navToggle');
+var mobileMenu = document.getElementById('mobileMenu');
+navToggle.addEventListener('click', function(){
+  var isOpen = mobileMenu.classList.toggle('open');
+  navToggle.classList.toggle('open', isOpen);
+  navToggle.setAttribute('aria-expanded', isOpen);
+});
+mobileMenu.querySelectorAll('a').forEach(function(link){
+  link.addEventListener('click', function(){
+    mobileMenu.classList.remove('open');
+    navToggle.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  });
+});
+
+// Smooth-scroll for nav anchors
+document.querySelectorAll('a[href^="#"]').forEach(function(link){
+  link.addEventListener('click', function(e){
+    var targetId = this.getAttribute('href').slice(1);
+    var target = document.getElementById(targetId);
+    if(target){
+      e.preventDefault();
+      var headerOffset = 80;
+      var elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({ top: elementPosition - headerOffset, behavior: 'smooth' });
+    }
+  });
+});
+
+// Expandable cards (services, portfolio, why-choose)
+function toggleCard(cardEl){
+  var wasExpanded = cardEl.classList.contains('expanded');
+  var siblings = cardEl.parentElement.querySelectorAll('.card.expandable.expanded');
+  siblings.forEach(function(c){ c.classList.remove('expanded'); });
+  if(!wasExpanded){ cardEl.classList.add('expanded'); }
+}
+
+// Mini image sliders inside expandable cards (services + portfolio)
+function initMiniSliders(){
+  document.querySelectorAll('.mini-slider').forEach(function(slider){
+    if(slider.dataset.msInit) return;
+    slider.dataset.msInit = '1';
+    var track = slider.querySelector('.mini-slider-track');
+    var imgs = track.querySelectorAll('img');
+    var dotsWrap = slider.querySelector('.ms-dots');
+    slider.dataset.msIndex = '0';
+    if(imgs.length <= 1){
+      var prevBtn = slider.querySelector('.ms-prev'), nextBtn = slider.querySelector('.ms-next');
+      if(prevBtn) prevBtn.style.display = 'none';
+      if(nextBtn) nextBtn.style.display = 'none';
+      return;
+    }
+    imgs.forEach(function(_, i){
+      var dot = document.createElement('button');
+      dot.className = 'ms-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Go to photo ' + (i + 1));
+      dot.addEventListener('click', function(e){ e.stopPropagation(); msGoTo(slider, i); });
+      dotsWrap.appendChild(dot);
+    });
+  });
+}
+function msGoTo(slider, index){
+  var track = slider.querySelector('.mini-slider-track');
+  var imgs = track.querySelectorAll('img');
+  var idx = (index + imgs.length) % imgs.length;
+  slider.dataset.msIndex = String(idx);
+  track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+  slider.querySelectorAll('.ms-dot').forEach(function(d, i){ d.classList.toggle('active', i === idx); });
+}
+function msMove(btn, dir){
+  var slider = btn.closest('.mini-slider');
+  var current = parseInt(slider.dataset.msIndex || '0', 10);
+  msGoTo(slider, current + dir);
+}
+document.addEventListener('DOMContentLoaded', initMiniSliders);
+
+// Reviews marquee: duplicate the cards once so the scroll loop is seamless
+(function initReviewMarquee(){
+  document.addEventListener('DOMContentLoaded', function(){
+    var track = document.getElementById('reviewTrack');
+    if(!track) return;
+    var originalHTML = track.innerHTML;
+    track.innerHTML = originalHTML + originalHTML;
+  });
+})();
+
+// Scroll-reveal animations
+var revealEls = document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+  var revealObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('in-view');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(function(el){ revealObserver.observe(el); });
+} else {
+  revealEls.forEach(function(el){ el.classList.add('in-view'); });
+}
+
+// Gallery slideshow
+(function(){
+  var slides = document.querySelectorAll('#gallery .gallery-slide');
+  var dotsWrap = document.getElementById('galleryDots');
+  var current = 0;
+  var timer;
+  slides.forEach(function(_, i){
+    var dot = document.createElement('button');
+    dot.className = 'gallery-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+    dot.addEventListener('click', function(){ goToSlide(i); });
+    dotsWrap.appendChild(dot);
+  });
+  var dots = dotsWrap.querySelectorAll('.gallery-dot');
+  function goToSlide(index){
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (index + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+    resetTimer();
+  }
+  window.galleryMove = function(dir){ goToSlide(current + dir); };
+  function resetTimer(){
+    clearInterval(timer);
+    timer = setInterval(function(){ goToSlide(current + 1); }, 4500);
+  }
+  resetTimer();
+})();
+
+// Budget calculator
+function updateDefaultArea(){
+  var bhk = document.getElementById('bhk');
+  document.getElementById('calcArea').value = bhk.value;
+}
+function selectTier(el){
+  document.querySelectorAll('.tier-btn').forEach(function(b){ b.classList.remove('active'); });
+  el.classList.add('active');
+}
+function calcBudget(){
+  var area = parseFloat(document.getElementById('calcArea').value) || 0;
+  var activeTier = document.querySelector('.tier-btn.active');
+  var rate = parseFloat(activeTier.getAttribute('data-rate'));
+
+  var lowCost = area * rate;
+  var highCost = area * rate * 1.2;
+
+  function formatINR(n){
+    if(n >= 100000){ return '₹' + (n/100000).toFixed(1).replace(/\.0$/,'') + 'L'; }
+    return '₹' + Math.round(n).toLocaleString('en-IN');
+  }
+
+  document.getElementById('rCostRange').textContent = formatINR(lowCost) + ' – ' + formatINR(highCost);
+  document.getElementById('rRate').textContent = '₹' + rate.toLocaleString('en-IN') + '/sqft';
+
+  var weeks = Math.max(4, Math.round(area / 220));
+  document.getElementById('rTimeline').textContent = weeks + '–' + (weeks + 2) + ' weeks';
+}
+// Run once on load for a default preview
+document.addEventListener('DOMContentLoaded', calcBudget);
+
+// ===== Google Sheets form submission =====
+// After deploying the Apps Script (see google-apps-script-interiors.gs),
+// paste your Web App URL below, replacing the placeholder text.
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyCQ_Y3kHo2LCEY6k-uVfYEVICol2wjk0Dk8YEZuSodZ9StXx78NfDvkdj3JHfnChTQ/exec";
+
+function submitConsultForm(e){
+  e.preventDefault();
+  const statusEl = document.getElementById('f-status');
+  const btn = document.getElementById('f-submit-btn');
+  const originalBtnText = btn.textContent;
+
+  if (APPS_SCRIPT_URL.indexOf('PASTE_YOUR_DEPLOYMENT_URL_HERE') !== -1) {
+    statusEl.textContent = 'Form is not yet connected to Google Sheets. See google-apps-script-interiors.gs for setup steps.';
+    statusEl.style.color = '#8B5E34';
+    return false;
+  }
+
+  const data = new URLSearchParams();
+  data.append('name', document.getElementById('f-name').value);
+  data.append('phone', document.getElementById('f-phone').value);
+  data.append('email', document.getElementById('f-email').value);
+  data.append('city', document.getElementById('f-city').value);
+  data.append('projectType', document.getElementById('f-project').value);
+  data.append('area', document.getElementById('f-area').value);
+  data.append('budget', document.getElementById('f-budget').value);
+  data.append('details', document.getElementById('f-details').value);
+
+  btn.disabled = true;
+  btn.textContent = 'Submitting...';
+  statusEl.textContent = '';
+
+  fetch(APPS_SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: data })
+  .then(function(){
+    statusEl.textContent = "Thanks! We've received your details and will contact you within 24 hours.";
+    statusEl.style.color = 'var(--green)';
+    document.getElementById('consultForm').reset();
+  })
+  .catch(function(){
+    statusEl.textContent = 'Something went wrong. Please call us directly at 8367086748.';
+    statusEl.style.color = '#8B5E34';
+  })
+  .finally(function(){
+    btn.disabled = false;
+    btn.textContent = originalBtnText;
+  });
+
+  return false;
+}
+</script>
+
+</body>
+</html>

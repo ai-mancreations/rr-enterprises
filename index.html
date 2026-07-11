@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raghavaraju Enterprises | Interiors · Solar · Construction — Kakinada</title>
+<meta name="description" content="Raghavaraju Enterprises — premium interior design, solar energy installation, and construction services in Kakinada, Andhra Pradesh. Three divisions, one build quality.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FBF6EC;
+    --paper-2:#F1E4CB;
+    --paper-3:#EAD9B7;
+    --ink-text:#241C10;
+    --copper:#C1571F;
+    --copper-light:#E3812F;
+    --copper-deep:#8C3D14;
+    --gold:#B5791A;
+    --sun:#D99B2B;
+    --brand-deep:#7A3315;
+    --brand-deep-2:#5E2710;
+    --line-light:#E3D2AA;
+    --line-mid:#D6C093;
+    --muted-light:#6E624B;
+    --muted-soft:#8C7F65;
+    --radius:4px;
+    --max:1220px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter', sans-serif;
+    background:var(--paper);
+    color:var(--ink-text);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  ul{list-style:none;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 32px;}
+  .serif{font-family:'Fraunces', serif;}
+  .mono{font-family:'IBM Plex Mono', monospace; letter-spacing:.03em;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--copper);
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:16px;
+  }
+  .eyebrow::before{content:''; width:22px; height:1px; background:var(--copper); display:inline-block;}
+  section{position:relative;}
+
+  /* ===== blueprint corner bracket signature ===== */
+  .blueprint{position:relative; border:1px solid var(--line-light);}
+  .blueprint::before, .blueprint::after,
+  .blueprint .bp-tr, .blueprint .bp-br{
+    content:''; position:absolute; width:14px; height:14px;
+    border-color:var(--copper); border-style:solid; border-width:0;
+  }
+  .blueprint::before{ top:-1px; left:-1px; border-top-width:2px; border-left-width:2px; }
+  .blueprint::after{ bottom:-1px; right:-1px; border-bottom-width:2px; border-right-width:2px; }
+  .blueprint .bp-tr{ top:-1px; right:-1px; border-top-width:2px; border-right-width:2px; }
+  .blueprint .bp-br{ bottom:-1px; left:-1px; border-bottom-width:2px; border-left-width:2px; }
+
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    font-family:'IBM Plex Mono', monospace; font-size:13px; letter-spacing:.06em; text-transform:uppercase;
+    padding:15px 26px; border-radius:var(--radius); cursor:pointer; border:1px solid transparent;
+    transition:transform .15s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
+    white-space:nowrap;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:linear-gradient(135deg, var(--copper-light), var(--copper)); color:#fff; font-weight:600; box-shadow:0 6px 22px rgba(193,87,31,.30);}
+  .btn-primary:hover{box-shadow:0 10px 28px rgba(193,87,31,.42); transform:translateY(-2px) scale(1.02);}
+  .btn-outline{border-color:var(--line-mid); color:var(--ink-text);}
+  .btn-outline:hover{border-color:var(--copper); color:var(--copper); background:rgba(193,87,31,.06);}
+  .btn-outline-light{border-color:var(--line-light); color:var(--ink-text);}
+  .btn-outline-light:hover{border-color:var(--copper); color:var(--copper);}
+
+  /* ===== header ===== */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    background:rgba(251,246,236,.9); backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line-light);
+  }
+  .nav{display:flex; align-items:center; justify-content:space-between; height:78px;}
+  .logo{display:flex; align-items:center; gap:12px; color:var(--ink-text);}
+  .logo-mark{width:34px; height:34px; flex-shrink:0;}
+  .logo-text{font-family:'Fraunces', serif; font-weight:600; font-size:18px; line-height:1.15; color:var(--ink-text);}
+  .logo-text span{display:block; font-family:'IBM Plex Mono', monospace; font-size:9px; letter-spacing:.16em; color:var(--muted-soft); text-transform:uppercase; margin-top:2px; font-weight:400;}
+  .nav-links{display:flex; align-items:center; gap:38px;}
+  .nav-links a{
+    font-family:'IBM Plex Mono', monospace; font-size:12.5px; letter-spacing:.05em; text-transform:uppercase;
+    color:var(--muted-light); transition:color .2s ease; position:relative; padding:6px 0;
+  }
+  .nav-links a:hover{color:var(--ink-text);}
+  .nav-links a.active{color:var(--copper);}
+  .nav-cta{display:flex; align-items:center; gap:16px;}
+  .nav-call{display:flex; align-items:center; gap:8px; color:var(--ink-text); font-family:'IBM Plex Mono',monospace; font-size:13px;}
+  .burger{display:none; flex-direction:column; gap:5px; cursor:pointer; z-index:200;}
+  .burger span{width:24px; height:2px; background:var(--ink-text); display:block; transition:.25s;}
+
+  /* ===== hero ===== */
+  .hero{
+    background:linear-gradient(180deg, var(--paper-2), var(--paper) 55%);
+    color:var(--ink-text);
+    padding:150px 0 90px;
+    position:relative;
+    background-image:
+      linear-gradient(var(--line-light) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line-light) 1px, transparent 1px),
+      linear-gradient(180deg, var(--paper-2), var(--paper) 55%);
+    background-size:42px 42px, 42px 42px, 100% 100%;
+    background-position:center top;
+  }
+  .hero::after{
+    content:''; position:absolute; inset:0;
+    background:
+      radial-gradient(ellipse 55% 50% at 80% 20%, rgba(217,155,43,.22), transparent 68%),
+      radial-gradient(ellipse 45% 45% at 10% 85%, rgba(193,87,31,.14), transparent 70%);
+    pointer-events:none;
+  }
+  .hero-grid{display:grid; grid-template-columns:1.05fr .95fr; gap:60px; align-items:center; position:relative; z-index:2;}
+  .hero h1{
+    font-size:clamp(38px, 5.2vw, 68px); line-height:1.03; font-weight:600; letter-spacing:-.01em;
+    margin-bottom:26px; color:var(--ink-text);
+  }
+  .hero h1 em{font-style:italic; font-weight:500; background:linear-gradient(100deg, var(--copper-deep), var(--copper)); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;}
+  .hero p.lede{font-size:17px; color:var(--muted-light); max-width:490px; margin-bottom:38px;}
+  .hero-ctas{display:flex; gap:16px; margin-bottom:56px; flex-wrap:wrap;}
+  .stat-strip{display:grid; grid-template-columns:repeat(4,1fr); gap:14px;}
+  .stat{
+    background:#fff;
+    border:1px solid var(--line-light);
+    border-radius:10px;
+    padding:22px 18px;
+    text-align:left;
+    position:relative;
+    overflow:hidden;
+    transition:transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+    box-shadow:0 3px 14px rgba(122,51,21,.05);
+  }
+  .stat:hover{transform:translateY(-4px); border-color:var(--copper); box-shadow:0 10px 26px rgba(193,87,31,.14);}
+  .stat .icon{width:22px; height:22px; color:var(--copper); margin-bottom:14px;}
+  .stat .num{font-family:'Fraunces', serif; font-size:30px; font-weight:700; line-height:1; color:var(--copper-deep);}
+  .stat .label{font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted-light); margin-top:8px;}
+
+  .hero-art{position:relative;}
+  .hero-art svg{width:100%; height:auto;}
+
+  /* ===== marquee ===== */
+  .marquee-band{background:var(--paper-2); border-top:1px solid var(--line-light); border-bottom:1px solid var(--line-light); padding:20px 0; overflow:hidden;}
+  .marquee-band .tag{font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted-light); text-align:center; margin-bottom:14px;}
+  .marquee-track{display:flex; gap:60px; white-space:nowrap; animation:scroll 28s linear infinite; width:max-content;}
+  .marquee-track span{font-family:'Fraunces', serif; font-size:16px; color:var(--ink-text); display:flex; align-items:center; gap:10px;}
+  .marquee-track span::before{content:'◆'; color:var(--copper); font-size:9px;}
+  @keyframes scroll{from{transform:translateX(0);} to{transform:translateX(-50%);}}
+
+  /* ===== section shell ===== */
+  .section{padding:110px 0;}
+  .section-head{max-width:640px; margin-bottom:64px;}
+  .section-head h2{font-size:clamp(28px,3.4vw,44px); font-weight:600; line-height:1.12; color:var(--ink-text);}
+  .section-head p{color:var(--muted-light); font-size:16px; margin-top:16px; max-width:520px;}
+  .section-dark{
+    background:var(--paper-2);
+  }
+  .section-dark .section-head p{color:var(--muted-light);}
+
+  /* ===== divisions ===== */
+  .divisions-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+  .division-card{background:#fff; padding:44px 36px; position:relative; border-radius:14px; transition:transform .25s ease, box-shadow .25s ease;}
+  .division-card:hover{transform:translateY(-6px); box-shadow:0 16px 40px rgba(193,87,31,.14);}
+  .division-card .el-mark{font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.1em; color:var(--copper); margin-bottom:22px; display:block;}
+  .division-icon{width:46px; height:46px; margin-bottom:26px; color:var(--copper);}
+  .division-card h3{font-family:'Fraunces', serif; font-size:22px; font-weight:600; margin-bottom:14px; color:var(--ink-text);}
+  .division-card p.desc{color:var(--muted-light); font-size:14.5px; margin-bottom:22px;}
+  .division-card ul{margin-bottom:28px;}
+  .division-card ul li{
+    font-size:13.5px; color:var(--ink-text); padding:9px 0; border-top:1px solid var(--line-light);
+    display:flex; align-items:center; gap:10px;
+  }
+  .division-card ul li::before{content:''; width:5px; height:5px; background:var(--copper); flex-shrink:0;}
+  .division-card .go{font-family:'IBM Plex Mono',monospace; font-size:12.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--copper); display:inline-flex; align-items:center; gap:8px;}
+  .division-card .go svg{width:14px; height:14px; transition:transform .2s ease;}
+  .division-card:hover .go svg{transform:translateX(4px);}
+
+  /* ===== why us table ===== */
+  .why-table{width:100%; border-collapse:collapse; font-size:14.5px; background:#fff; border-radius:10px; overflow:hidden;}
+  .why-table th{
+    text-align:left; font-family:'IBM Plex Mono',monospace; font-size:11px; text-transform:uppercase; letter-spacing:.08em;
+    color:#fff; background:var(--copper); padding:16px 20px;
+  }
+  .why-table td{padding:20px; border-bottom:1px solid var(--line-light); color:var(--muted-light); vertical-align:top;}
+  .why-table td:first-child{color:var(--ink-text); font-weight:600; width:26%;}
+  .why-table tr:last-child td{border-bottom:none;}
+
+  /* ===== process ===== */
+  .process-wrap{position:relative;}
+  .process-list{display:grid; grid-template-columns:repeat(5,1fr); gap:0; position:relative;}
+  .process-list::before{content:''; position:absolute; top:19px; left:0; right:0; height:1px; border-top:1px dashed var(--line-mid);}
+  .process-step{position:relative; padding:50px 20px 0 0;}
+  .process-step .dot{
+    width:38px; height:38px; border-radius:50%; background:var(--paper); border:2px solid var(--copper);
+    display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--copper);
+    position:absolute; top:0; left:0; z-index:2;
+  }
+  .process-step h4{font-family:'Fraunces',serif; font-size:17px; font-weight:600; margin-bottom:8px; color:var(--ink-text);}
+  .process-step p{font-size:13.5px; color:var(--muted-light);}
+
+  /* ===== testimonials (scrolling marquee) ===== */
+  .test-marquee-outer{
+    overflow:hidden;
+    -webkit-mask-image:linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+    mask-image:linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  }
+  .test-track{display:flex; gap:20px; width:max-content; animation:testScroll 48s linear infinite;}
+  .test-track:hover{animation-play-state:paused;}
+  @keyframes testScroll{from{transform:translateX(0);} to{transform:translateX(-50%);}}
+  .test-card{
+    background:#fff; border:1px solid var(--line-light); border-radius:12px;
+    padding:30px; display:flex; flex-direction:column; gap:20px; width:340px; flex-shrink:0;
+    box-shadow:0 4px 18px rgba(36,28,16,.06);
+  }
+  .test-card .stars{color:var(--sun); font-size:14px; letter-spacing:2px;}
+  .test-card .quote{font-family:'Fraunces',serif; font-size:16px; font-style:italic; line-height:1.5; color:var(--ink-text);}
+  .test-who{display:flex; align-items:center; gap:12px; margin-top:auto;}
+  .avatar{width:38px; height:38px; border-radius:50%; background:linear-gradient(135deg,var(--copper-light),var(--copper)); color:#fff; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:700; flex-shrink:0;}
+  .test-who .name{font-size:13.5px; font-weight:600; color:var(--ink-text);}
+  .test-who .loc{font-size:12px; color:var(--muted-light); font-family:'IBM Plex Mono',monospace;}
+
+  /* ===== FAQ ===== */
+  .faq-item{border-bottom:1px solid var(--line-light);}
+  .faq-q{
+    display:flex; justify-content:space-between; align-items:center; padding:26px 0; cursor:pointer;
+    font-family:'Fraunces',serif; font-size:18px; color:var(--ink-text);
+  }
+  .faq-q .plus{font-family:'IBM Plex Mono',monospace; color:var(--copper); font-size:20px; transition:transform .25s ease; flex-shrink:0; margin-left:20px;}
+  .faq-item.open .faq-q .plus{transform:rotate(45deg);}
+  .faq-a{max-height:0; overflow:hidden; transition:max-height .3s ease;}
+  .faq-a p{padding-bottom:26px; color:var(--muted-light); font-size:14.5px; max-width:680px;}
+  .faq-item.open .faq-a{max-height:200px;}
+
+  /* ===== contact ===== */
+  .contact-grid{display:grid; grid-template-columns:.9fr 1.1fr; gap:0; border:1px solid var(--line-light); border-radius:14px; overflow:hidden;}
+  .contact-info{background:linear-gradient(160deg, var(--brand-deep), var(--brand-deep-2)); color:var(--paper); padding:52px 44px;}
+  .contact-info h3{font-family:'Fraunces',serif; font-size:26px; margin-bottom:16px;}
+  .contact-info p{color:#E8D3BE; font-size:14.5px; margin-bottom:36px;}
+  .c-row{display:flex; gap:16px; padding:18px 0; border-top:1px solid rgba(255,255,255,.14);}
+  .c-row:first-of-type{border-top:none;}
+  .c-icon{width:20px; height:20px; color:var(--sun); flex-shrink:0; margin-top:2px;}
+  .c-row .label{font-family:'IBM Plex Mono',monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; color:#D9BFA4; margin-bottom:4px;}
+  .c-row .val{font-size:15px;}
+  .contact-form{background:#fff; padding:52px 44px;}
+  .f-row{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-bottom:18px;}
+  .field label{display:block; font-family:'IBM Plex Mono',monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted-light); margin-bottom:8px;}
+  .field input, .field select, .field textarea{
+    width:100%; padding:13px 14px; border:1px solid var(--line-light); background:var(--paper); font-family:'Inter',sans-serif;
+    font-size:14.5px; border-radius:var(--radius); color:var(--ink-text);
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{outline:2px solid var(--copper); outline-offset:1px; border-color:var(--copper);}
+  .field{margin-bottom:18px;}
+  .contact-form .btn{width:100%; justify-content:center; margin-top:6px;}
+
+  /* ===== footer ===== */
+  footer{background:var(--paper-2); color:var(--muted-light); padding:80px 0 30px; border-top:3px solid var(--copper);}
+  .foot-grid{display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr; gap:40px; margin-bottom:60px;}
+  .foot-brand .logo-text{color:var(--ink-text);}
+  .foot-brand p{font-size:13.5px; margin-top:18px; max-width:280px; color:var(--muted-light);}
+  .foot-col h5{font-family:'IBM Plex Mono',monospace; font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--copper); margin-bottom:20px;}
+  .foot-col li{margin-bottom:12px; font-size:13.5px;}
+  .foot-col a:hover{color:var(--copper);}
+  .foot-bottom{display:flex; justify-content:space-between; align-items:center; padding-top:28px; border-top:1px solid var(--line-mid); font-size:12.5px; flex-wrap:wrap; gap:12px;}
+  .foot-social{display:flex; gap:16px;}
+  .foot-social a{width:34px; height:34px; border:1px solid var(--line-mid); border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--muted-light);}
+  .foot-social a:hover{border-color:var(--copper); color:var(--copper);}
+
+  /* ===== sticky call fab (mobile) ===== */
+  .call-fab{
+    position:fixed; bottom:22px; right:22px; z-index:90; width:56px; height:56px; border-radius:50%;
+    background:linear-gradient(135deg, var(--copper-light), var(--copper)); display:none; align-items:center; justify-content:center; box-shadow:0 8px 24px rgba(122,51,21,.35);
+  }
+  .call-fab svg{width:24px; height:24px; color:#fff;}
+
+  /* ===================== RESPONSIVE ===================== */
+  @media (max-width:1024px){
+    .wrap{padding:0 24px;}
+    .hero-grid{grid-template-columns:1fr; gap:50px;}
+    .hero-art{order:-1; max-width:320px; margin:0 auto;}
+    .divisions-grid{grid-template-columns:1fr; }
+    .contact-grid{grid-template-columns:1fr;}
+    .foot-grid{grid-template-columns:1fr 1fr; row-gap:40px;}
+    .process-list{grid-template-columns:repeat(5,1fr); gap:14px;}
+    .why-table{font-size:13px;}
+  }
+  @media (max-width:860px){
+    .nav-links{
+      position:fixed; top:78px; left:0; right:0; bottom:0; background:var(--paper);
+      flex-direction:column; justify-content:flex-start; align-items:flex-start; gap:0;
+      padding:30px 28px; transform:translateX(100%); transition:transform .3s ease; overflow-y:auto;
+    }
+    .nav-links.open{transform:translateX(0);}
+    .nav-links a{width:100%; padding:18px 0; border-bottom:1px solid var(--line-light); font-size:14px;}
+    .burger{display:flex;}
+    .nav-call{display:none;}
+    .call-fab{display:flex;}
+    .process-list{grid-template-columns:1fr 1fr; gap:36px 20px;}
+    .process-list::before{display:none;}
+    .stat-strip{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width:600px){
+    .section{padding:74px 0;}
+    .hero{padding:120px 0 60px;}
+    .hero-ctas{flex-direction:column; align-items:stretch;}
+    .f-row{grid-template-columns:1fr;}
+    .foot-grid{grid-template-columns:1fr; gap:32px;}
+    .foot-bottom{flex-direction:column; align-items:flex-start;}
+    .stat-strip{grid-template-columns:1fr 1fr; gap:10px;}
+    .stat{padding:16px 14px;}
+    .stat .num{font-size:24px;}
+    .contact-info, .contact-form{padding:36px 24px;}
+    .why-table{display:block; overflow-x:auto; white-space:nowrap;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#home" class="logo">
+      <svg class="logo-mark" viewBox="0 0 40 40" fill="none">
+        <path d="M4 34V16L20 6L36 16V34" stroke="#C1571F" stroke-width="2"/>
+        <path d="M14 34V22H26V34" stroke="#241C10" stroke-width="2"/>
+        <circle cx="20" cy="6" r="2" fill="#D99B2B"/>
+      </svg>
+      <span class="logo-text">Raghavaraju Enterprises<span>Est. Kakinada, A.P.</span></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="active">Home</a>
+      <a href="#divisions">Divisions</a>
+      <a href="#why">Why Us</a>
+      <a href="#process">Process</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:8367086748" class="nav-call">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        8367086748
+      </a>
+      <a href="#contact" class="btn btn-primary">Get Free Quote</a>
+      <div class="burger" id="burger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Three divisions · One standard of craft</div>
+      <h1 class="serif">Building dreams,<br>engineered to <em>last.</em></h1>
+      <p class="lede">Interior design, solar energy, and construction — delivered by one Kakinada-based team that treats every site like it's the only one we're working on.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary">Get Free Consultation</a>
+        <a href="#divisions" class="btn btn-outline">
+          View Our Divisions
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div class="stat-strip">
+        <div class="stat">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg>
+          <div class="num">10+</div><div class="label">Years in business</div>
+        </div>
+        <div class="stat">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          <div class="num">3</div><div class="label">Specialist divisions</div>
+        </div>
+        <div class="stat">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div class="num">100%</div><div class="label">Kakinada rooted</div>
+        </div>
+        <div class="stat">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
+          <div class="num">GST</div><div class="label">Registered entity</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <svg viewBox="0 0 460 460" fill="none">
+        <circle cx="230" cy="230" r="200" stroke="#D6C093" stroke-width="1" stroke-dasharray="4 6"/>
+        <circle cx="230" cy="230" r="150" stroke="#D6C093" stroke-width="1"/>
+        <!-- house -->
+        <path d="M120 260L230 175L340 260V360H120V260Z" stroke="#241C10" stroke-width="2" fill="none"/>
+        <rect x="150" y="285" width="40" height="75" stroke="#C1571F" stroke-width="2" fill="none"/>
+        <rect x="270" y="285" width="45" height="45" stroke="#241C10" stroke-width="1.5" fill="none"/>
+        <line x1="292.5" y1="285" x2="292.5" y2="330" stroke="#241C10" stroke-width="1"/>
+        <line x1="270" y1="307.5" x2="315" y2="307.5" stroke="#241C10" stroke-width="1"/>
+        <!-- solar panels on roof -->
+        <g stroke="#E7A83D" stroke-width="1.5">
+          <line x1="150" y1="235" x2="230" y2="185"/>
+          <line x1="230" y1="185" x2="310" y2="235"/>
+          <path d="M165 226L245 176M182 216L262 166M199 206L279 156" stroke-opacity=".6"/>
+        </g>
+        <!-- sun rays -->
+        <circle cx="345" cy="110" r="22" stroke="#E7A83D" stroke-width="2"/>
+        <g stroke="#E7A83D" stroke-width="2">
+          <line x1="345" y1="66" x2="345" y2="76"/>
+          <line x1="345" y1="144" x2="345" y2="154"/>
+          <line x1="301" y1="110" x2="311" y2="110"/>
+          <line x1="379" y1="110" x2="389" y2="110"/>
+          <line x1="313" y1="78" x2="320" y2="85"/>
+          <line x1="370" y1="135" x2="377" y2="142"/>
+          <line x1="377" y1="78" x2="370" y2="85"/>
+          <line x1="320" y1="135" x2="313" y2="142"/>
+        </g>
+        <!-- measurement ticks -->
+        <g stroke="#6E624B" stroke-width="1">
+          <line x1="120" y1="375" x2="340" y2="375"/>
+          <line x1="120" y1="370" x2="120" y2="380"/>
+          <line x1="340" y1="370" x2="340" y2="380"/>
+        </g>
+        <text x="215" y="395" fill="#6E624B" font-family="IBM Plex Mono" font-size="10">6.4M SITE MODULE</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="marquee-band">
+  <div class="tag">Serving Kakinada &amp; East Godavari since establishment</div>
+  <div class="marquee-track" id="marquee">
+    <span>Residential Interiors</span>
+    <span>Modular Kitchens</span>
+    <span>Rooftop Solar</span>
+    <span>PM Surya Ghar Subsidy</span>
+    <span>Turnkey Construction</span>
+    <span>Commercial Fit-outs</span>
+    <span>Net Metering</span>
+    <span>Renovation</span>
+  </div>
+</div>
+
+<!-- ============ DIVISIONS ============ -->
+<section class="section" id="divisions">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Our business divisions</div>
+      <h2 class="serif">Three pillars, built on one foundation.</h2>
+      <p>Each division runs its own specialist crew — but every job is measured against the same standard before we call it done.</p>
+    </div>
+
+    <div class="divisions-grid">
+      <div class="division-card blueprint">
+        <span class="bp-tr"></span><span class="bp-br"></span>
+        <span class="el-mark">ELEVATION 01</span>
+        <svg class="division-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+        <h3>RR Interiors &amp; Home Decors</h3>
+        <p class="desc">Transform living and work spaces into considered, liveable design — from concept to the last coat of paint.</p>
+        <ul>
+          <li>Residential interior design</li>
+          <li>Commercial space planning</li>
+          <li>Modular kitchen solutions</li>
+          <li>Custom furniture design</li>
+        </ul>
+        <a href="interiors.html" class="go">Explore Interiors
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="division-card blueprint">
+        <span class="bp-tr"></span><span class="bp-br"></span>
+        <span class="el-mark">ELEVATION 02</span>
+        <svg class="division-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <h3>RR Solar Energies</h3>
+        <p class="desc">Solar installations sized for real Andhra Pradesh electricity bills, with the subsidy paperwork handled for you.</p>
+        <ul>
+          <li>Residential solar (1kW–10kW)</li>
+          <li>Commercial installations</li>
+          <li>PM Surya Ghar subsidy support</li>
+          <li>Net metering assistance</li>
+        </ul>
+        <a href="solar.html" class="go">Explore Solar
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="division-card blueprint">
+        <span class="bp-tr"></span><span class="bp-br"></span>
+        <span class="el-mark">ELEVATION 03</span>
+        <svg class="division-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
+        <h3>RR Homes Construction</h3>
+        <p class="desc">Structural work you don't have to double-check — clear schedules, honest material grades, timely handover.</p>
+        <ul>
+          <li>Residential construction</li>
+          <li>Commercial buildings</li>
+          <li>Renovation &amp; remodeling</li>
+          <li>Turnkey project solutions</li>
+        </ul>
+        <a href="construction.html" class="go">Explore Construction
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY US ============ -->
+<section class="section section-dark" id="why">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Why choose us</div>
+      <h2 class="serif">What working with Raghavaraju actually looks like.</h2>
+      <p>No subcontractor hand-offs, no vanishing after the advance payment. Here's the difference in practice.</p>
+    </div>
+    <table class="why-table">
+      <tr><th>Area</th><th>Our approach</th></tr>
+      <tr><td>Single point of contact</td><td>One coordinator across design, solar, and construction — even if your project touches more than one division.</td></tr>
+      <tr><td>Transparent quoting</td><td>Itemised estimates before work starts, with material grade and brand named — not just a lump-sum figure.</td></tr>
+      <tr><td>Local accountability</td><td>Kakinada-based office and crews, not a call centre — site visits are a drive away, not a video call.</td></tr>
+      <tr><td>Subsidy &amp; paperwork</td><td>PM Surya Ghar subsidy filing and net-metering applications handled on your behalf for solar projects.</td></tr>
+      <tr><td>Timelines</td><td>Written schedules with milestone dates, shared before the contract is signed.</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="section" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">How a project runs</div>
+      <h2 class="serif">From enquiry to handover, in five steps.</h2>
+    </div>
+    <div class="process-list">
+      <div class="process-step"><div class="dot">01</div><h4>Enquiry</h4><p>Call, WhatsApp, or the form below — tell us what you need.</p></div>
+      <div class="process-step"><div class="dot">02</div><h4>Site visit</h4><p>Our team surveys the site and takes measurements in person.</p></div>
+      <div class="process-step"><div class="dot">03</div><h4>Design &amp; quote</h4><p>You get a concept, material list, and itemised estimate.</p></div>
+      <div class="process-step"><div class="dot">04</div><h4>Execution</h4><p>Work begins against a written schedule with milestone checks.</p></div>
+      <div class="process-step"><div class="dot">05</div><h4>Handover</h4><p>Final walkthrough, documentation, and warranty details.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Client feedback</div>
+      <h2 class="serif">What clients say once the dust settles.</h2>
+    </div>
+    <div class="test-marquee-outer">
+      <div class="test-track" id="testTrack">
+        <div class="test-card">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"They quoted a number and stuck to it. No surprise additions halfway through the kitchen work."</p>
+          <div class="test-who"><div class="avatar">SP</div><div><div class="name">Srinivasa Prasad</div><div class="loc">Kakinada</div></div></div>
+        </div>
+        <div class="test-card">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"The solar subsidy paperwork alone would have taken us weeks. They handled the whole filing."</p>
+          <div class="test-who"><div class="avatar">LV</div><div><div class="name">Lakshmi Vara Prasad</div><div class="loc">Rajahmundry</div></div></div>
+        </div>
+        <div class="test-card">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Our house was finished nine days ahead of the written schedule. Didn't think that happened here."</p>
+          <div class="test-who"><div class="avatar">RK</div><div><div class="name">Ravi Kumar</div><div class="loc">Kakinada</div></div></div>
+        </div>
+        <div class="test-card">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Modular kitchen came out better than the 3D design they showed us. Genuinely surprised."</p>
+          <div class="test-who"><div class="avatar">AN</div><div><div class="name">Anitha Nagesh</div><div class="loc">Kakinada</div></div></div>
+        </div>
+        <div class="test-card">
+          <div class="stars">★★★★☆</div>
+          <p class="quote">"Site visits every week without us having to ask. That kind of follow-through is rare."</p>
+          <div class="test-who"><div class="avatar">MB</div><div><div class="name">Murali Babu</div><div class="loc">Samalkot</div></div></div>
+        </div>
+        <div class="test-card">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Our electricity bill dropped to almost nothing after the rooftop installation. Paid for itself faster than expected."</p>
+          <div class="test-who"><div class="avatar">VS</div><div><div class="name">Venkata Subbarao</div><div class="loc">Kakinada</div></div></div>
+        </div>
+        <div class="test-card">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Renovated our shop front while we stayed open. Careful planning around our business hours."</p>
+          <div class="test-who"><div class="avatar">PK</div><div><div class="name">Prasanna Kumari</div><div class="loc">Rajahmundry</div></div></div>
+        </div>
+        <div class="test-card">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"One coordinator for construction and interiors meant we never had to repeat ourselves to a new team."</p>
+          <div class="test-who"><div class="avatar">DR</div><div><div class="name">Durga Rao</div><div class="loc">Kakinada</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section section-dark" id="faq">
+  <div class="wrap" style="max-width:820px;">
+    <div class="section-head">
+      <div class="eyebrow">Frequently asked</div>
+      <h2 class="serif">Straight answers before you call.</h2>
+    </div>
+    <div id="faqList">
+      <div class="faq-item open">
+        <div class="faq-q">Which areas do you serve?<span class="plus">+</span></div>
+        <div class="faq-a"><p>We're based in Kakinada and serve clients across East Godavari and the wider Andhra Pradesh region for interiors, solar, and construction projects.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do you handle the solar subsidy paperwork?<span class="plus">+</span></div>
+        <div class="faq-a"><p>Yes — RR Solar Energies handles PM Surya Ghar subsidy applications and net-metering paperwork as part of residential installations.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I use more than one division for the same project?<span class="plus">+</span></div>
+        <div class="faq-a"><p>Yes, this is common — for example a new home build with RR Homes Construction, finished by RR Interiors, with rooftop solar added by RR.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How do I get a quote?<span class="plus">+</span></div>
+        <div class="faq-a"><p>Fill out the enquiry form below or call us directly at 8367086748. We'll arrange a site visit before preparing an itemised estimate.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Get in touch</div>
+      <h2 class="serif">Let's build something great together.</h2>
+      <p>Whether it's a home to transform, a roof ready for solar, or a project to construct — start here.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3 class="serif">Raghavaraju Enterprises</h3>
+        <p>Your trusted partner for interior design, solar energy, and construction — since establishment.</p>
+        <div class="c-row">
+          <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <div><div class="label">Phone</div><div class="val"><a href="tel:8367086748">8367086748</a></div></div>
+        </div>
+        <div class="c-row">
+          <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
+          <div><div class="label">Email</div><div class="val"><a href="mailto:info@raghavarajuenterprises.com">info@raghavarajuenterprises.com</a></div></div>
+        </div>
+        <div class="c-row">
+          <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><div class="label">Head office</div><div class="val">Kakinada, Andhra Pradesh</div></div>
+        </div>
+        <div class="c-row">
+          <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 12l2 2 4-4M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
+          <div><div class="label">GST</div><div class="val">37MIFPS2466D1ZU</div></div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <form id="quoteForm" onsubmit="return submitQuoteForm(event);">
+          <div class="f-row">
+            <div class="field"><label>Full name</label><input id="quoteName" name="name" type="text" required placeholder="Your name"></div>
+            <div class="field"><label>Phone number</label><input id="quotePhone" name="phone" type="tel" required placeholder="10-digit mobile"></div>
+          </div>
+          <div class="field"><label>Email (optional)</label><input id="quoteEmail" name="email" type="email" placeholder="you@example.com"></div>
+          <div class="field">
+            <label>Service required</label>
+            <select id="quoteService" name="service" required>
+              <option value="">Select service</option>
+              <option>Interior Design</option>
+              <option>Solar Installation</option>
+              <option>Construction</option>
+              <option>Multiple Services</option>
+            </select>
+          </div>
+          <div class="field"><label>Project details</label><textarea id="quoteDetails" name="details" rows="4" placeholder="Tell us about your project — location, size, timeline"></textarea></div>
+          <button id="quoteSubmitBtn" type="submit" class="btn btn-primary">Submit Enquiry</button>
+          <p id="quoteStatus" class="form-note" style="margin-top:12px;"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#home" class="logo">
+          <svg class="logo-mark" viewBox="0 0 40 40" fill="none">
+            <path d="M4 34V16L20 6L36 16V34" stroke="#C1571F" stroke-width="2"/>
+            <path d="M14 34V22H26V34" stroke="#241C10" stroke-width="2"/>
+            <circle cx="20" cy="6" r="2" fill="#D99B2B"/>
+          </svg>
+          <span class="logo-text">Raghavaraju Enterprises</span>
+        </a>
+        <p>Premium interior design, solar energy solutions, and quality construction services — serving Kakinada and East Godavari with excellence and integrity.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Divisions</h5>
+        <ul>
+          <li><a href="interiors.html">RR Interiors &amp; Home Decors</a></li>
+          <li><a href="solar.html">RR Solar Energies</a></li>
+          <li><a href="construction.html">RR Homes Construction</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Quick links</h5>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#divisions">Our Services</a></li>
+          <li><a href="#why">Why Us</a></li>
+          <li><a href="#contact">Get Quote</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Contact info</h5>
+        <ul>
+          <li><a href="tel:8367086748">8367086748</a></li>
+          <li><a href="mailto:info@raghavarajuenterprises.com">info@raghavarajuenterprises.com</a></li>
+          <li>Kakinada, Andhra Pradesh</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Raghavaraju Enterprises. All rights reserved. · GST: 37MIFPS2466D1ZU</span>
+      <div class="foot-social">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">◎</a>
+        <a href="#" aria-label="WhatsApp">✆</a>
+        <a href="#" aria-label="YouTube">▶</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="tel:8367086748" class="call-fab" aria-label="Call now">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+</a>
+
+<script>
+  // mobile nav toggle
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    burger.classList.toggle('active');
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+  }));
+
+  // marquee duplicate for seamless loop
+  const marquee = document.getElementById('marquee');
+  marquee.innerHTML += marquee.innerHTML;
+
+  // testimonial track duplicate for seamless loop
+  const testTrack = document.getElementById('testTrack');
+  testTrack.innerHTML += testTrack.innerHTML;
+
+  // faq accordion
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.querySelector('.faq-q').addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // ===== Google Sheets form submission =====
+  const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyCQ_Y3kHo2LCEY6k-uVfYEVICol2wjk0Dk8YEZuSodZ9StXx78NfDvkdj3JHfnChTQ/exec";
+
+  function submitQuoteForm(e){
+    e.preventDefault();
+
+    const statusEl = document.getElementById('quoteStatus');
+    const btn = document.getElementById('quoteSubmitBtn');
+    const originalBtnText = btn.textContent;
+
+    const data = new URLSearchParams();
+    data.append('name', document.getElementById('quoteName').value.trim());
+    data.append('phone', document.getElementById('quotePhone').value.trim());
+    data.append('email', document.getElementById('quoteEmail').value.trim());
+    data.append('service', document.getElementById('quoteService').value);
+    data.append('details', document.getElementById('quoteDetails').value.trim());
+    data.append('source', 'index.html');
+
+    btn.disabled = true;
+    btn.textContent = 'Submitting...';
+    statusEl.textContent = '';
+
+    fetch(APPS_SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: data
+    })
+    .then(function(){
+      statusEl.textContent = "Thanks! We've received your enquiry and will contact you shortly.";
+      statusEl.style.color = 'var(--copper)';
+      document.getElementById('quoteForm').reset();
+    })
+    .catch(function(){
+      statusEl.textContent = 'Something went wrong. Please call us directly at 8367086748.';
+      statusEl.style.color = '#8C3D14';
+    })
+    .finally(function(){
+      btn.disabled = false;
+      btn.textContent = originalBtnText;
+    });
+
+    return false;
+  }
+
+  // active nav link on scroll
+  const sections = document.querySelectorAll('section[id]');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(sec => {
+      if (window.scrollY >= sec.offsetTop - 120) current = sec.getAttribute('id');
+    });
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  });
+</script>
+</body>
+</html>
