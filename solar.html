@@ -381,6 +381,24 @@
   .foot-grid li{margin-bottom:10px; font-size:14px; color:var(--text-secondary);}
   .foot-grid li a:hover{color:var(--solar-1);}
   .foot-bottom{border-top:1px solid var(--border); padding-top:24px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:13px; color:var(--text-secondary);}
+
+  /* ===== MODAL STYLES ===== */
+  .modal-overlay{display:none; position:fixed; inset:0; background:rgba(0,0,0,.5); z-index:1000; align-items:center; justify-content:center; backdrop-filter:blur(3px);}
+  .modal-overlay.active{display:flex;}
+  .modal-box{background:#fff; border-radius:8px; padding:42px; max-width:520px; width:90vw; max-height:90vh; overflow-y:auto; box-shadow:0 20px 60px rgba(0,0,0,.3); position:relative;}
+  .modal-close{position:absolute; top:18px; right:18px; width:32px; height:32px; border:none; background:#F1E4CB; color:var(--text-primary); cursor:pointer; border-radius:4px; font-size:20px; display:flex; align-items:center; justify-content:center; transition:background .2s ease;}
+  .modal-close:hover{background:var(--solar-1); color:#fff;}
+  .modal-head{margin-bottom:28px;}
+  .modal-head h2{font-size:26px; font-weight:600; color:var(--text-primary); margin-bottom:8px;}
+  .modal-head p{color:var(--text-secondary); font-size:14px;}
+  .modal-form{display:flex; flex-direction:column; gap:18px;}
+  .modal-form .field{display:flex; flex-direction:column;}
+  .modal-form label{font-size:13px; font-weight:500; color:var(--text-primary); margin-bottom:6px; text-transform:uppercase; letter-spacing:.05em;}
+  .modal-form input, .modal-form select, .modal-form textarea{font-family:'Inter',sans-serif; font-size:14px; padding:12px; border:1px solid var(--border); border-radius:4px; color:var(--text-primary); background:#fff; transition:border-color .2s ease;}
+  .modal-form input:focus, .modal-form select:focus, .modal-form textarea:focus{outline:none; border-color:var(--solar-1);}
+  .modal-form textarea{resize:vertical; min-height:100px;}
+  .modal-form .modal-submit{margin-top:8px;}
+  .modal-status{font-size:13px; margin-top:12px; min-height:20px;}
 </style>
 </head>
 <body>
@@ -400,7 +418,8 @@
       </div>
       <div class="nav-cta">
         <a href="tel:8367086748" class="nav-phone">📞 8367086748</a>
-        <a href="#contact" class="btn btn-primary" style="padding:10px 20px; font-size:14px;">Get Free Quote</a>
+        <button onclick="openModal('quote')" class="btn btn-primary" style="padding:10px 20px; font-size:14px; border:none; cursor:pointer;">Free Quote</button>
+        <button onclick="openModal('support')" class="btn btn-ghost" style="padding:10px 20px; font-size:14px; border:none; cursor:pointer;">Support</button>
       </div>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
     </nav>
@@ -897,6 +916,34 @@
   </div>
 </section>
 
+<section class="section" id="support">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Support for existing systems</div>
+      <h2>We also help with your current solar setup.</h2>
+      <p>Not only do we install new systems, we also support existing solar projects with inspections, maintenance, cleaning, repairs, and expansion planning.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <div class="ic">🛠️</div>
+        <h3>Service & maintenance</h3>
+        <p>Keep your solar plant running efficiently with inspections, cleaning, and performance support.</p>
+      </div>
+      <div class="card">
+        <div class="ic">📅</div>
+        <h3>Book a service visit</h3>
+        <p>Choose a support request and we will help you arrange the right appointment through this page.</p>
+      </div>
+      <div class="card">
+        <div class="ic">⚡</div>
+        <h3>Upgrade or expand</h3>
+        <p>Planning an upgrade, additional panels, or an existing system review? We can schedule that too.</p>
+        <a href="#contact" class="btn btn-primary" style="margin-top:12px;">Book Appointment</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="contact">
   <div class="wrap contact-layout">
     <div>
@@ -931,6 +978,16 @@
         <div class="field">
           <label>Preferred Capacity</label>
           <select name="preferredCapacity" id="f-capacity"><option>Not sure</option><option>1 kW</option><option>2 kW</option><option>3 kW</option><option>5 kW</option><option>10 kW</option><option>More than 10 kW</option></select>
+        </div>
+        <div class="field">
+          <label>Service Needed</label>
+          <select name="serviceNeeded" id="f-service">
+            <option>Select service</option>
+            <option>New solar installation</option>
+            <option>Existing system service / maintenance</option>
+            <option>Panel cleaning / inspection</option>
+            <option>System upgrade / expansion</option>
+          </select>
         </div>
         <div class="field"><label>Additional Details</label><textarea name="additionalDetails" id="f-details"></textarea></div>
         <button type="submit" class="btn btn-primary" id="f-submit-btn" style="width:100%;">Submit Enquiry ☀</button>
@@ -1066,7 +1123,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function(link){
 // ===== Google Sheets form submission =====
 // After deploying the Apps Script (see google-apps-script.gs), paste your
 // Web App URL below, replacing the placeholder text.
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyCQ_Y3kHo2LCEY6k-uVfYEVICol2wjk0Dk8YEZuSodZ9StXx78NfDvkdj3JHfnChTQ/exec";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxAO-F7UgJxvWyP8ro0WM2Hedq78efo-yjT41OZHi4pf1kVMtODHB3A9GbC8MnnjX1hrw/exec";
 
 function submitSurveyForm(e){
   e.preventDefault();
@@ -1089,6 +1146,7 @@ function submitSurveyForm(e){
   data.append('roofType', document.getElementById('f-roof').value);
   data.append('monthlyBill', document.getElementById('f-bill').value);
   data.append('preferredCapacity', document.getElementById('f-capacity').value);
+  data.append('serviceNeeded', document.getElementById('f-service').value);
   data.append('additionalDetails', document.getElementById('f-details').value);
 
   btn.disabled = true;
@@ -1166,7 +1224,187 @@ function calcSolar(){
   const afterPct = bill > 0 ? Math.max(4, Math.round((billAfter / bill) * 100)) : 4;
   document.getElementById('barAfter').style.width = afterPct + '%';
 }
+
+// ===== MODAL FUNCTIONS =====
+function openModal(type) {
+  document.getElementById(type + 'Modal').classList.add('active');
+}
+
+function closeModal(type) {
+  document.getElementById(type + 'Modal').classList.remove('active');
+}
+
+function submitQuoteModal(e) {
+  e.preventDefault();
+  const statusEl = document.getElementById('quoteModalStatus');
+  const btn = document.querySelector('#quoteModal button[type="submit"]');
+  const originalBtnText = btn.textContent;
+
+  const data = new URLSearchParams();
+  data.append('name', document.getElementById('quoteModalName').value.trim());
+  data.append('phone', document.getElementById('quoteModalPhone').value.trim());
+  data.append('email', document.getElementById('quoteModalEmail').value.trim());
+  data.append('service', document.getElementById('quoteModalService').value);
+  data.append('details', document.getElementById('quoteModalDetails').value.trim());
+  data.append('source', document.title);
+  data.append('formType', 'Free Quote');
+
+  btn.disabled = true;
+  btn.textContent = 'Submitting...';
+  statusEl.textContent = '';
+
+  fetch(APPS_SCRIPT_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    body: data
+  })
+  .then(function(){
+    statusEl.textContent = "Thanks! We've received your quote request. We'll contact you within 1 hour.";
+    statusEl.style.color = 'var(--green)';
+    document.getElementById('quoteModalForm').reset();
+    setTimeout(() => closeModal('quote'), 2000);
+  })
+  .catch(function(){
+    statusEl.textContent = 'Something went wrong. Please call 8367086748.';
+    statusEl.style.color = '#FF7A3D';
+  })
+  .finally(function(){
+    btn.disabled = false;
+    btn.textContent = originalBtnText;
+  });
+  return false;
+}
+
+function submitSupportModal(e) {
+  e.preventDefault();
+  const statusEl = document.getElementById('supportModalStatus');
+  const btn = document.querySelector('#supportModal button[type="submit"]');
+  const originalBtnText = btn.textContent;
+
+  const data = new URLSearchParams();
+  data.append('name', document.getElementById('supportModalName').value.trim());
+  data.append('phone', document.getElementById('supportModalPhone').value.trim());
+  data.append('email', document.getElementById('supportModalEmail').value.trim());
+  data.append('issueType', document.getElementById('supportModalIssue').value);
+  data.append('details', document.getElementById('supportModalDetails').value.trim());
+  data.append('source', document.title);
+  data.append('formType', 'Customer Support');
+
+  btn.disabled = true;
+  btn.textContent = 'Submitting...';
+  statusEl.textContent = '';
+
+  fetch(APPS_SCRIPT_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    body: data
+  })
+  .then(function(){
+    statusEl.textContent = "Thanks! We've received your support request. Our team will contact you shortly.";
+    statusEl.style.color = 'var(--green)';
+    document.getElementById('supportModalForm').reset();
+    setTimeout(() => closeModal('support'), 2000);
+  })
+  .catch(function(){
+    statusEl.textContent = 'Something went wrong. Please call 8367086748.';
+    statusEl.style.color = '#FF7A3D';
+  })
+  .finally(function(){
+    btn.disabled = false;
+    btn.textContent = originalBtnText;
+  });
+  return false;
+}
+
+// Close modal when clicking overlay
+document.addEventListener('click', function(e) {
+  if (e.target.classList.contains('modal-overlay')) {
+    e.target.classList.remove('active');
+  }
+});
 </script>
+
+<!-- MODALS -->
+<div id="quoteModal" class="modal-overlay">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('quote')">✕</button>
+    <div class="modal-head">
+      <h2>Get Free Quote</h2>
+      <p>Tell us about your solar needs and we'll provide a personalized quote within 1 hour</p>
+    </div>
+    <form id="quoteModalForm" class="modal-form" onsubmit="return submitQuoteModal(event);">
+      <div class="field">
+        <label>Your Name *</label>
+        <input type="text" id="quoteModalName" required>
+      </div>
+      <div class="field">
+        <label>Phone Number *</label>
+        <input type="tel" id="quoteModalPhone" required>
+      </div>
+      <div class="field">
+        <label>Email Address</label>
+        <input type="email" id="quoteModalEmail">
+      </div>
+      <div class="field">
+        <label>Service Required *</label>
+        <select id="quoteModalService" required>
+          <option value="">Select service</option>
+          <option>New solar installation</option>
+          <option>Existing system service</option>
+          <option>System upgrade</option>
+          <option>Consultation</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Project Details</label>
+        <textarea id="quoteModalDetails" placeholder="Tell us about your solar needs, roof type, monthly bill estimate..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary modal-submit" style="width:100%; border:none; cursor:pointer;">Get Free Quote</button>
+      <div class="modal-status" id="quoteModalStatus"></div>
+    </form>
+  </div>
+</div>
+
+<div id="supportModal" class="modal-overlay">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('support')">✕</button>
+    <div class="modal-head">
+      <h2>Customer Support</h2>
+      <p>Need help with an existing solar system? Let us know and we'll get back to you shortly</p>
+    </div>
+    <form id="supportModalForm" class="modal-form" onsubmit="return submitSupportModal(event);">
+      <div class="field">
+        <label>Your Name *</label>
+        <input type="text" id="supportModalName" required>
+      </div>
+      <div class="field">
+        <label>Phone Number *</label>
+        <input type="tel" id="supportModalPhone" required>
+      </div>
+      <div class="field">
+        <label>Email Address</label>
+        <input type="email" id="supportModalEmail">
+      </div>
+      <div class="field">
+        <label>Issue Type *</label>
+        <select id="supportModalIssue" required>
+          <option value="">Select issue type</option>
+          <option>Existing system service / maintenance</option>
+          <option>Panel cleaning / inspection</option>
+          <option>Repair / fix needed</option>
+          <option>System upgrade / expansion</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Issue Details</label>
+        <textarea id="supportModalDetails" placeholder="Describe the issue, what service you need..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary modal-submit" style="width:100%; border:none; cursor:pointer;">Submit Request</button>
+      <div class="modal-status" id="supportModalStatus"></div>
+    </form>
+  </div>
+</div>
 
 </body>
 </html>
