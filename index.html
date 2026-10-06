@@ -750,7 +750,7 @@
         </div>
       </div>
       <div class="contact-form">
-        <form id="quoteForm" onsubmit="return submitQuoteForm(event);">
+        <form id="quoteForm" onsubmit="return submitQuoteForm(event);"><input type="hidden" name="form_type" value="APPOINTMENT_REQUEST"><input type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0">
           <div class="f-row">
             <div class="field"><label>Full name</label><input id="quoteName" name="name" type="text" required placeholder="Your name"></div>
             <div class="field"><label>Phone number</label><input id="quotePhone" name="phone" type="tel" required placeholder="10-digit mobile"></div>
@@ -855,7 +855,7 @@
       <h2>Get Free Quote</h2>
       <p>Tell us about your project and we'll provide a personalized quote within 2 hours</p>
     </div>
-    <form id="quoteModalForm" class="modal-form" onsubmit="return submitQuoteModal(event);">
+    <form id="quoteModalForm" class="modal-form" onsubmit="return submitQuoteModal(event);"><input type="hidden" name="form_type" value="SALES_LEAD"><input type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0">
       <div class="field">
         <label>Your Name *</label>
         <input type="text" id="quoteModalName" required>
@@ -895,7 +895,7 @@
       <h2>Customer Support</h2>
       <p>Need help with an existing project? Let us know and we'll get back to you shortly</p>
     </div>
-    <form id="supportModalForm" class="modal-form" onsubmit="return submitSupportModal(event);">
+    <form id="supportModalForm" class="modal-form" onsubmit="return submitSupportModal(event);"><input type="hidden" name="form_type" value="SUPPORT_REQUEST"><input type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0">
       <div class="field">
         <label>Your Name *</label>
         <input type="text" id="supportModalName" required>
@@ -1113,5 +1113,6 @@
     });
   });
 </script>
+<script src="crm-forms.js"></script>
 </body>
 </html>
